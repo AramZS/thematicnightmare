@@ -1,0 +1,615 @@
+body {
+
+	/**background-color: #181818**/
+	font-family: Arial, Tahoma,Century gothic, sans-serif;
+	font-size: 13px;
+	background-image: url('library/imgs/wrap.png');
+	background-repeat:repeat;
+	
+}
+
+body.home ul#simplepages {
+	width: 940px;
+	margin: 2px auto;
+}
+
+body.home ul#simplepages li {
+	list-style-type: none;
+	display: inline;
+	margin-right: 30px;
+}
+
+.clear {
+	clear:both;
+}
+
+div {
+
+	display: block;
+}
+
+/**header elements**/
+
+header div {
+
+	background-color: darkred;
+
+}
+
+#header {
+
+	/**height: 408px;**/
+	width: 100%;
+	margin: 4px 0;
+	margin-top: 0px;
+	background-color: #181818;
+	overflow: hidden;
+	border-bottom: 2px #343434 solid;
+	
+}
+
+header a {
+	text-decoration: none;
+	border: 0;
+}
+
+#branding {
+
+	height: 150px;
+	margin-bottom: 4px;
+	padding: 0;
+	background-color: transparent;
+
+}
+
+.headad {
+
+	width: 180px;
+	height: 150px;
+
+}
+
+#majorstory {
+
+	margin-right: 2px;
+	float: left;
+}
+
+#adrighthead {
+
+	margin-left: 2px;
+	float: right;
+	
+	
+}
+
+#socialhead {
+
+	float: left;
+	height: 40px;
+	width: 320px;
+	margin-left: 8px;
+	
+}
+
+#searchhead {
+
+	float:left;
+	height: 40px;
+	width: 240px;
+	margin: 0 12px;
+	margin-right: 8px;
+	
+}
+
+#sitetitle {
+
+	float: left;
+	width: 620px;
+	height: 100px;
+	margin-left: 8px;
+	margin-top: 8px;
+	
+}
+
+#logo img {
+	float: left;
+}
+
+
+#tagline{
+
+	float:left;
+	margin-top:-22px;
+	color: white;
+	background-color: transparent;
+	margin-left: 300px;
+	font: italic bold 14px arial,sans-serif;
+	-moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+	cursor:default; /*makes it even more obvious that I don't want people highlighting.*/
+
+}
+
+.rec-head-title {
+
+	float:right;
+	text-align:left;
+	margin-top: -56px;
+	margin-right: 28px;
+	padding-left: 10px;
+	background-color: black;
+	color: white;
+
+}
+
+.rec-head-title a:link{
+
+	color: white;
+
+}
+
+.rec-head-title a:visited{
+
+	color: white;
+
+}
+
+.rec-head-title a:hover{
+
+	color: red;
+
+}
+
+
+
+#majorstory img {
+
+	float:left;
+
+}
+
+.skip-link {
+    border-bottom:0px;
+    height:0px;
+    font-size:13px;
+    overflow:hidden;
+	display:none;
+    z-index:100;
+}
+
+
+
+
+/** Nav items */
+
+nav {
+
+	height: 46px;
+	margin: 0 auto;
+	margin-top: 8px;
+	background-color: #ac1c25;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	font-family: Arial, verdana,Tahoma,Century gothic, sans-serif;
+	
+}
+
+.menu ul {
+
+	list-style-type: none;
+	display: table;
+	text-align:left;
+	margin:0 auto;
+	padding:0;
+	
+}
+
+.menu ul li {
+
+	display:inline;
+	
+}
+
+.menu a {
+
+	text-align: center;
+	padding: 2px 6px;
+	margin-right: 6px;
+	text-decoration: none;
+	background: white;
+	
+}
+
+/**slider**/
+
+#featured {
+
+	height: 200px;
+	margin: 8px auto;
+	display: block;
+	margin-bottom: 8px;
+	overflow: hidden;
+	
+}
+
+.slide {
+
+	background-color:transparent;
+	overflow: hidden;
+
+}
+
+.subslider {
+
+	display: inline;
+	float: left;
+	width: 196px;
+	height: 196px;
+	margin-right:0px;
+	border: 2px solid black;
+	
+}
+
+.subslider img {
+
+	float:left;
+
+}
+
+.ss1 {
+
+	
+	
+}
+
+.ss5 {
+
+	
+	
+}
+
+.slider-item-title {
+
+	float:left;
+	text-align:left;
+	margin-top: -72px;
+	margin-right: 28px;
+	padding: 4px 10px;
+	background-image:url(library/imgs/black-trans.png);
+	background-color: transparent;
+	background-repeat: repeat;
+	color: white;
+	z-index: 1000;
+	font-family: Helvetica, sans-serif;
+	font-size: 14px;
+
+}
+
+.slider-item-title a:link{
+
+	color: white;
+
+}
+
+.slider-item-title a:visited{
+
+	color: white;
+
+}
+
+.slider-item-title a:hover{
+
+	color: red;
+
+}
+
+/**posts**/
+
+#main {
+
+	width: 1000px;
+	padding-top: 20px;
+
+}
+
+#container {
+
+	width:692px;
+}
+
+/**article elements**/
+
+#content {
+	
+	width: 678px;
+	float: left;
+	margin: 0 0 0 0;
+
+}
+
+/**post list**/
+
+.hfeed {
+
+	background-color: transparent;
+	
+}
+
+.readmoregraf {
+
+	margin-bottom: 4px;
+	
+}
+
+/* Blog posts */
+
+.hentry{
+	background:#fff;
+	border:1px solid #e0e0e0;
+	margin-bottom:30px;
+
+}
+
+h1.post-title{
+	font-size:30px;
+	margin:15px 15px;
+	padding:5px 0px;
+	font-family:Georgia, Arial, Tahoma,Century gothic,  sans-serif;
+	font-weight:normal;
+}
+
+h1.post-title a:link,h2.post-title a:visited{
+	color:#444
+}
+h1.post-title a:hover{
+
+	color:#222;
+}
+
+h1.post-title{
+	font-size:32px;
+	margin:10px 15px;
+	padding:10px 0px;
+	font-family:Georgia, Arial, Tahoma,Century gothic,  sans-serif;
+	font-weight:normal;
+	line-height: 100%;
+
+}
+
+.single .hentry {
+
+	padding: 12px;
+	
+}
+
+
+
+.post-meta{
+	margin:10px 15px;
+	padding:5px 10px;
+ 	background:#333; 
+	font-size:10px;
+	color:#fff;
+	text-transform:uppercase;
+}
+
+
+.hentry footer{
+	background:#fafafa;
+	padding:10px 0px;
+	border-top:1px solid #E8E8E8;
+
+}
+
+.hentry footer span{
+	padding:0px 15px;
+	
+}
+
+article img.wp-post-image{
+	margin:15px 15px 15px 15px;
+	background:#eee;
+	border:1px solid #ddd;
+	padding:6px;
+	float:left;
+	width:150px;
+	height:120px;
+}
+
+img.postimg{
+	margin:15px 15px 15px 15px;
+	background:#eee;
+	border:1px solid #ddd;
+	padding:6px;
+	float:left;
+	width:150px;
+	height:120px;
+}
+
+.entry{
+	color:#555;
+	line-height:170%;
+	padding:10px 15px;
+	
+}
+
+.hentry p{
+	padding:0px 0px;
+}
+
+	
+.hentry :link,
+.hentry a:visited {
+	color:#444;
+	background-color: transparent;
+}
+.hentry a:hover {
+	color:#073f84;
+	background-color: transparent;
+	text-decoration: none;
+
+}
+
+.hentry ul, .hentry ol{
+  margin: .4em 0 1em;
+  line-height: 150%;
+}
+
+.hentry ul li, .hentry ol li{
+  list-style-position:outside;
+  margin-left: 1.6em;
+}
+
+article:first-child {
+
+	
+
+}
+
+
+p {margin-bottom: 1.143em;}
+
+
+.frontpageFB {
+
+	margin-left: 16px;
+	width: 650px;
+	overflow:hidden;
+
+}
+
+.frontpageTweet {
+
+	float: right;
+
+}
+
+.frontpagePlus {
+
+	float:right;
+	width: 72px;
+	margin-right: 2px;
+
+}
+
+
+/**author post info**/
+.author-bio{
+	padding-left: 14px;
+	border-top: 1px solid #E8E8E8;
+	padding-top: 15px;
+	padding-right: 14px;
+	border-bottom:1px dotted #ddd;
+	padding-bottom:15px;
+}
+
+#author-avatar{
+	float:left;
+	background:#f4f4f4;
+	border:1px solid #eee;
+	margin-right:15px;
+	padding:5px;
+	width: 60px;
+}
+
+#author-avatar img{
+	display:inline;
+}
+
+#author-text h4{
+	font-size:14px;
+	font-weight:bold;
+	padding-bottom: 15px;
+	line-height: 125%;
+}
+
+#author-text{
+	width: 424px;
+	float: right;
+	display:block;
+	white-space: normal;
+}
+
+
+#author-text p{
+	color:#666;
+	font-size:12px;
+	line-height:150%;
+	
+}
+
+
+/*sidebar*/
+
+.main-aside {
+
+	width: 306px;
+	margin-right: 0px;
+	right: 0px;
+}
+
+/**comments**/
+
+#respond {
+
+	padding: 18px;
+	
+}
+
+/*footer*/
+
+#footer {
+
+	background-color: #ac1c25;
+	
+}
+
+/*mods*/
+
+.wdgpo_standard_count {
+
+	float:right;
+	margin-top:-20px;
+
+}
+
+.single .entry {
+
+	margin-top: -4px;
+
+}
+
+.author-bio {
+
+	padding-left: 14px;
+	border-top: 1px solid #E8E8E8;
+	padding-top: 15px;
+	padding-right: 14px;
+
+}
+
+.metatagged {
+
+	padding: 0px 15px;
+
+}
+
+
+.authorSocial {
+
+	margin-top: 8px;
+
+}
+
+/*Give me 1000px width, but make it easy to change. Is that too much to ask for? body class. */
+
+.bclass {
+
+	width: 1000px!important; /*important because thematic is overriding it and I'm too lazy for a better fix*/
+	
+}
