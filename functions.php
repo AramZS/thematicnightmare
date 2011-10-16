@@ -75,6 +75,7 @@ function childtheme_override_blogtitle() { ?>
 				Follow us:
 				</div>
 				<div id="searchhead">
+					<?php include ( TEMPLATEPATH . '/searchform.php'); ?>
 				</div>
 				<div id="adrighthead" class="headad">
 				</div>

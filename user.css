@@ -96,10 +96,18 @@ header a {
 
 	float:left;
 	height: 40px;
-	width: 240px;
+	width: 288px;
 	margin: 0 12px;
 	margin-right: 8px;
 	
+}
+
+#searchhead #s {
+
+	width: 212px;
+	margin-left: 3px;
+	margin-top: 6px;
+
 }
 
 #sitetitle {
@@ -195,7 +203,8 @@ nav {
 	width: 100%;
 	overflow: hidden;
 	text-align: center;
-	font-family: Arial, verdana,Tahoma,Century gothic, sans-serif;
+	font-family: Arial, verdana,Tahoma,Century gothic, sans-serif; 
+	
 	
 }
 
@@ -206,23 +215,64 @@ nav {
 	text-align:left;
 	margin:0 auto;
 	padding:0;
+	border: 0;
+	background-color: transparent;
 	
+	
+}
+
+.menu .sf-menu ul li {
+
+	
+
 }
 
 .menu ul li {
 
 	display:inline;
+	color: white;
+	height: 46px;
+	border: 0;
+	background-color: transparent;
 	
 }
 
-.menu a {
+.windows .sf-menu a {
 
-	text-align: center;
-	padding: 2px 6px;
+	padding: 14px 16px;
 	margin-right: 6px;
 	text-decoration: none;
-	background: white;
+	color: white;
+	border: 0;
+	background-color: transparent;
 	
+}
+
+.windows .sf-menu li:first-child a {
+
+	padding-left: 1px;
+	
+}
+
+.sf-menu a {
+
+	padding: 0;
+	color: white;
+
+}
+
+.sf-menu a, .sf-menu a:visited {
+
+	color: white!important;
+	background-color: transparent!important;
+
+}
+
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active, .sf-menu ul a:hover {
+
+	color: #f4878d!important;
+	background-color: transparent!important;
+
 }
 
 /**slider**/
