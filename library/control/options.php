@@ -38,9 +38,65 @@ function childtheme_options() {
 			"id" => "nmwp_slider_cat",
 			"std" => "1",
 			"type" => "text"
-		)
+		),
+		
+	array( 	"name" => __('Show RSS Social Icon','thematic'),
+			"desc" => __('Check to display.','thematic'),
+			"id" => "nmwp_social_rss",
+			"std" => "false",
+			"type" => "checkbox"
+		),
+		
+	array( 	"name" => __('Show Twitter Social Icon','thematic'),
+			"desc" => __('Check to display.','thematic'),
+			"id" => "nmwp_social_twit",
+			"std" => "false",
+			"type" => "checkbox"
+		),		
 
-	
+	array( 	"name" => __('Twitter Username','thematic'),
+			"desc" => __('Enter the Twitter username to work with the social icon.','thematic'),
+			"id" => "nmwp_social_twit_un",
+			"std" => "",
+			"type" => "text"
+		),
+		
+	array( 	"name" => __('Show Facebook Social Icon','thematic'),
+			"desc" => __('Check to display.','thematic'),
+			"id" => "nmwp_social_fb",
+			"std" => "false",
+			"type" => "checkbox"
+		),		
+
+	array( 	"name" => __('Facebook Username','thematic'),
+			"desc" => __('Enter the Facebook page username to work with the social icon.','thematic'),
+			"id" => "nmwp_social_fb_un",
+			"std" => "",
+			"type" => "text"
+		),
+
+	array( 	"name" => __('Show Write for Us Icon','thematic'),
+			"desc" => __('Check to display.','thematic'),
+			"id" => "nmwp_social_contribute",
+			"std" => "false",
+			"type" => "checkbox"
+		),		
+
+	array( 	"name" => __('Additional Social Media Icons','thematic'),
+			"desc" => __('Enter the URLs of the social media icons seperate with commas, no spaces. Should be 32x32px.','thematic'),
+			"id" => "nmwp_social_addl_icons",
+			"std" => "",
+			"type" => "text"
+		),
+
+	array( 	"name" => __('Additional Social URLs','thematic'),
+			"desc" => __('Enter social network URLs in order with the icons above. Comma seperated, no spaces.','thematic'),
+			"id" => "nmwp_social_addl_urls",
+			"std" => "",
+			"type" => "text"
+		)
+		
+		
  );
 }
 

@@ -14,6 +14,29 @@ function nmwp_favicon() {
 
 add_action('wp_head', 'nmwp_favicon');
 
+function nmwp_fonts() {
+	echo "<link href='http://fonts.googleapis.com/css?family=Nobile:400,700' rel='stylesheet' type='text/css'>";
+}
+
+add_action('wp_head', 'nmwp_fonts');
+
+function nmwp_widgets_init() {
+
+	if ( function_exists('register_sidebar') )
+	register_sidebar( array(
+		'name' => __( 'Ad Head Right', 'thematic' ),
+		'id' => 'ad-head-right',
+		'description' => __( 'The upper right widget area. Do not use the title. 180x150px', 'thematic' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );	
+
+}
+
+add_action( 'widgets_init', 'nmwp_widgets_init' );
+
 //enable the slideshow slider cycler for featured area. 
 
 function nmwp_cycler_script() {
@@ -72,12 +95,16 @@ function childtheme_override_blogtitle() { ?>
 					<?php include('library/control/headstory-extension.php'); ?>
 				</div>
 				<div id="socialhead">
-				Follow us:
+					<?php include('library/control/socialicons-extension.php'); ?>
 				</div>
 				<div id="searchhead">
 					<?php include ( TEMPLATEPATH . '/searchform.php'); ?>
 				</div>
 				<div id="adrighthead" class="headad">
+					<?php if ( !function_exists('dynamic_sidebar')
+					|| !dynamic_sidebar('Ad Head Right') ) : ?>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/library/imgs/180x150TestAd.png" />
+					<?php endif; ?>
 				</div>
 				<div id="sitetitle">
 					<div id="logo">
@@ -301,7 +328,7 @@ function nmwp_main_loop() {
 			<?php } ?> <!-- Thumbnail -->
 			
 			<div class="entry">
-				<?php the_excerpt(); ?><p class="readmoregraf"><a href=<?php get_permalink(); ?>>Read More from <?php the_title(); ?></a></p><!-- Excerpt -->
+				<?php the_excerpt(); ?><p class="readmoregraf"><a href="<?php the_permalink(); ?>">Read More from <?php the_title(); ?></a></p><!-- Excerpt -->
 				<div class="clear"></div>
 			</div><!--END entry -->
 			
