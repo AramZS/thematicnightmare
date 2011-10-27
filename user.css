@@ -1,9 +1,12 @@
 body {
 
-	/**background-color: #181818**/
-	font-family: Arial, Helvetica, sans-serif; 
-	font-size: 13px;
-	background-image: url('library/imgs/wrap.png');
+	/**background-color: #181818
+	Arial, Helvetica, sans-serif
+	**/
+	font-family: "Times New Roman", Times, serif; 
+	font-size: 14px;
+	/**background-image: url('library/imgs/wrap.png');**/
+	background-color: black;
 	background-repeat:repeat;
 	
 }
