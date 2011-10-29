@@ -259,7 +259,7 @@ nav {
 	overflow: hidden;
 	text-align: center;
 	font-family: Arial, verdana,Tahoma,Century gothic, sans-serif; 
-/**gradient up and down on "B" brightness scale**/
+/**gradient 10 up and down on "B" brightness scale**/
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c41f2a', endColorstr='#91171f'); /* for IE */
 background: -webkit-gradient(linear, left top, left bottom, from(#c41f2a), to(#91171f)); /* for webkit browsers */
 background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ */ 
