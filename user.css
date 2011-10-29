@@ -305,6 +305,7 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 	color: white;
 	border: 0;
 	background-color: transparent;
+	font-weight: bold;
 	
 }
 
