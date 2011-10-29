@@ -94,7 +94,28 @@ function childtheme_options() {
 			"id" => "nmwp_social_addl_urls",
 			"std" => "",
 			"type" => "text"
-		)
+		),
+
+	array ( "name" => __('Enter default site thumbnail','thematic'),
+			"desc" => __('Enter a URL for a default thumbnail for the website. This will be used by Facebook and other Open Graph applications.','thematic'),
+			"id" => "nmwp_fb_thumb",
+			"std" => "",
+			"type" => "text"
+		),
+		
+	array ( "name" => __('Facebook User IDs','thematic'),
+			"desc" => __('Enter the Facebook User IDs that administrate this page. Comma seperated, no spaces.','thematic'),
+			"id" => "nmwp_fb_IDs",
+			"std" => "",
+			"type" => "text"
+		),
+	
+	array ( "name" => __('Facebook App ID','thematic'),
+			"desc" => __('If you are using a Facebook app to help admin your page, enter the ID here.','thematic'),
+			"id" => "nmwp_fb_app_ID",
+			"std" => "",
+			"type" => "text"
+		)	
 		
 		
  );

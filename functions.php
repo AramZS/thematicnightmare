@@ -1,10 +1,29 @@
 <?php
 
+// include theme options (250) not working yet. 
+include('library/control/options.php');
+
+  // load the custom options
+  global $childoptions;
+  foreach ($childoptions as $value) {
+    $$value['id'] = get_option($value['id'], $value['std']);
+  }
+
 function nmwp_footer_pagelinks() {
 	echo '<ul id="simplepages">';
 	wp_list_pages('depth=1&sort_column=menu_order&title_li=');
 	echo '</ul>';
 }
+
+//Altering the doctype to support FBML and OpenGraph
+function childtheme_create_doctype($content) {
+    $content = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n";
+    $content .= '<html xmlns="http://www.w3.org/1999/xhtml"';
+	$content .= 'xmlns:og="http://ogp.me/ns#"';
+	$content .= 'xmlns:fb="https://www.facebook.com/2008/fbml"';
+	return $content;
+}
+add_filter('thematic_create_doctype', 'childtheme_create_doctype');
 
 //Should prob add some other sizes for mobile devices. 
 
@@ -14,11 +33,16 @@ function nmwp_favicon() {
 
 add_action('wp_head', 'nmwp_favicon');
 
+//Adding custom font for headlines.
 function nmwp_fonts() {
 	echo "<link href='http://fonts.googleapis.com/css?family=Nobile:400,700' rel='stylesheet' type='text/css'>";
 }
 
 add_action('wp_head', 'nmwp_fonts');
+	
+//Let's add some nice smooth opengraph functionality here to make sharing content on Facebook easier. 
+
+include('library/extensions/opengraph-extensions.php');
 
 function nmwp_widgets_init() {
 
@@ -67,9 +91,6 @@ function childtheme_override_brandingopen() {
 	
 }
 add_action('thematic_header','thematic_brandingopen',1);
-
-// include theme options (250) not working yet. 
-include('library/control/options.php');
 
 //custom header code
 include('library/control/controlheader.php');

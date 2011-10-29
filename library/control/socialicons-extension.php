@@ -1,16 +1,12 @@
 <?php
 
-  // load the custom options
-  global $childoptions;
-  foreach ($childoptions as $value) {
-    $$value['id'] = get_option($value['id'], $value['std']);
-  }
+
   
   if ( $nmwp_social_rss == 'true' ){
   
 	?>
 		<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Syndicate this site using RSS'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/library/imgs/socialmediaicons/rss.png" alt="Syndicate this site using RSS" /></a> 
-	<?php
+	<?php 
   
   }
  
