@@ -505,12 +505,6 @@ h1.post-title{
 
 }
 
-.single .hentry {
-
-	padding: 12px;
-	
-}
-
 
 
 .post-meta{
@@ -782,6 +776,53 @@ p {margin-bottom: 1.143em;}
 	padding-top: 8px;
 	
 }  
+
+/** Theming for single **/
+
+
+.single .hentry {
+
+	background: transparent;
+	border: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 8px;
+	padding-bottom: 12px;
+
+}
+
+.single .entry-top {
+
+	padding: 0 12px;
+
+}
+
+.single .single-title {
+
+	float: left;
+	width: 75%;
+
+}
+
+.single .entry-meta {
+
+	float: right;
+	width: 25%;
+	margin-bottom: 8px;
+	
+}
+
+.single .entry-sub-container {
+
+	padding: 0 12px;
+	background: white;
+	border: 1px solid #E0E0E0;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+
+}
 
 /** end of altered state 1 **/
 

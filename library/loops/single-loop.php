@@ -32,57 +32,60 @@ function childtheme_override_single_post() {
 				
 					
 					?>
+					<div class="entry-top">
+						<div class="single-title">
+							<?php the_title('<h1>', '</h1>'); ?>
+						</div>
+						
+						<div class="entry-meta">
+						<?php
+						
+						// Create $posteditlink    
+						$posteditlink .= '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
+						$posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
+						$posteditlink .= __('Edit', 'thematic') . '</a>';
+						
+						$postmeta_issingle .= '<span class="meta-prep meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
+						$postmeta_issingle .= '<span class="entry-date"><abbr class="published" title="';
+						$postmeta_issingle .= get_the_time(thematic_time_title()) . '">';
+						$postmeta_issingle .= time_ago();
+						$postmeta_issingle .= ' at ';
+						$postmeta_issingle .= get_the_time();
+						$postmeta_issingle .= ' on ';
+						$postmeta_issingle .= get_the_date();
+						$postmeta_issingle .= '</abbr></span>';
+			  
+						
+						
+						//Display author info area
+						
+						$postauthor .= '<span class="meta-prep meta-prep-author">' . __(' by ', 'thematic') . '</span>';	
+						$postauthor .= '<span class="author vcard">'. '<a class="url fn n" rel="author" href="';
+						$postauthor .= get_author_link(false, $authordata->ID, $authordata->user_nicename);
+						$postauthor .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
+						$postauthor .= get_the_author();
+						$postauthor .= '</a></span></h2>';
+						
+						// Display edit link
+						if (current_user_can('edit_posts')) {
+							$postmeta_edit .= ' <span class="meta-sep meta-sep-edit">|</span> ' . '<span class="edit">' . $posteditlink . '</span>';
+						}     
 
-					<div class="single-title">
-						<?php the_title('<h1>', '</h1>'); ?>
+						
+						echo $postmeta_issingle . $postauthor . $postmeta_edit;
+						
+						?>
+						</div><!-- .entry-meta -->
 					</div>
-					
-					<div class="entry-meta">
-					<?php
-					
-					// Create $posteditlink    
-					$posteditlink .= '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
-					$posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
-					$posteditlink .= __('Edit', 'thematic') . '</a>';
-					
-					$postmeta_issingle .= '<span class="meta-prep meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
-					$postmeta_issingle .= '<span class="entry-date"><abbr class="published" title="';
-					$postmeta_issingle .= get_the_time(thematic_time_title()) . '">';
-					$postmeta_issingle .= time_ago();
-					$postmeta_issingle .= ' at ';
-					$postmeta_issingle .= get_the_time();
-					$postmeta_issingle .= ' on ';
-					$postmeta_issingle .= get_the_date();
-					$postmeta_issingle .= '</abbr></span>';
-          
-					
-					
-					//Display author info area
-					
-					$postauthor .= '<span class="meta-prep meta-prep-author">' . __(' by ', 'thematic') . '</span>';	
-					$postauthor .= '<span class="author vcard">'. '<a class="url fn n" rel="author" href="';
-					$postauthor .= get_author_link(false, $authordata->ID, $authordata->user_nicename);
-					$postauthor .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
-					$postauthor .= get_the_author();
-					$postauthor .= '</a></span></h2>';
-					
-					// Display edit link
-					if (current_user_can('edit_posts')) {
-						$postmeta_edit .= ' <span class="meta-sep meta-sep-edit">|</span> ' . '<span class="edit">' . $posteditlink . '</span>';
-					}     
+					<div class="clear"></div>
+					<div class="entry-sub-container">
+						<div class="entry-content">
+							<?php thematic_content(); ?>
 
-					
-					echo $postmeta_issingle . $postauthor . $postmeta_edit;
-					
-					?>
-					</div><!-- .entry-meta -->
-
-					<div class="entry-content">
-<?php thematic_content(); ?>
-
-						<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
-					</div><!-- .entry-content -->
-					<?php thematic_postfooter(); ?>
+							<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+						</div><!-- .entry-content -->
+						<?php thematic_postfooter(); ?>
+					</div>
 				</div><!-- #post -->
 		<?php
 
