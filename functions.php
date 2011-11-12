@@ -33,6 +33,8 @@ function nmwp_favicon() {
 
 add_action('wp_head', 'nmwp_favicon');
 
+include('library/extensions/standout-extensions.php');
+
 //Adding custom font for headlines.
 function nmwp_fonts() {
 	echo "<link href='http://fonts.googleapis.com/css?family=Nobile:400,700' rel='stylesheet' type='text/css'>";
@@ -86,7 +88,7 @@ add_action('wp_head', 'nmwp_cycler_script');
 //Add bclass so I can change the width of the site at will. 
 
 function childtheme_override_brandingopen() {
-
+	
 	echo "<div id=\"branding\" class=\"bclass\">\n";
 	
 }
