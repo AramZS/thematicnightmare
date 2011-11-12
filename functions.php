@@ -375,4 +375,6 @@ function nmwp_main_loop() {
 	wp_reset_query();
 }
 	
+include('library/loops/single-loop.php');
+	
 ?>
