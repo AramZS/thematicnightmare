@@ -387,6 +387,7 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	overflow: hidden;
+	border-left-color:transparent;
 	
 }
 
@@ -399,6 +400,7 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	overflow: hidden;
+	border-right-color: transparent;
 	
 }
 
@@ -794,13 +796,16 @@ p {margin-bottom: 1.143em;}
 .single .entry-top {
 
 	padding: 0 12px;
+	vertical-align: bottom;
 
 }
 
-.single .single-title {
+.entry-top h1 {
 
 	float: left;
 	width: 75%;
+	height: 100%;
+	vertical-align: bottom;
 
 }
 

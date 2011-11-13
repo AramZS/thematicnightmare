@@ -33,9 +33,9 @@ function childtheme_override_single_post() {
 					
 					?>
 					<div class="entry-top">
-						<div class="single-title">
+						
 							<?php the_title('<h1>', '</h1>'); ?>
-						</div>
+						
 						
 						<div class="entry-meta">
 						<?php
