@@ -26,6 +26,19 @@ body.home ul#simplepages li {
 	clear:both;
 }
 
+.clearfix {
+	display: inline block;
+}
+
+.clearfix::after {
+content: " ";
+display: block;
+clear: both;
+visibility: hidden;
+line-height: 0;
+height: 0;
+}
+
 div {
 
 	display: block;
@@ -797,15 +810,69 @@ p {margin-bottom: 1.143em;}
 
 	padding: 0 12px;
 	vertical-align: bottom;
+	display: block;
+	position: relative;
+	height: auto;
 
+}
+
+.single .entry-top table, .single .entry-top tr {
+	
+	border: 0;
+	margin: 0;
+	padding: 0;
+	border-spacing: 0;
+
+}
+
+.single .entry-top td {
+
+	padding: 0;
+	vertical-align: bottom;
+	margin: 0;
+	border: 0;
+	
 }
 
 .entry-top h1 {
 
+	font-size: 3em;
+	color: white;
+	font-weight: 700;
+	line-height: 1.2em;
+	margin-bottom: -.24em;
+	font-family: 'Nobile', Arial, Helvetica, sans-serif;
+	padding-right: 20px;
+
+}
+
+.entry-top .entry-meta {
+
+	margin-bottom: 2px;
+
+}
+
+.meta-comment-single-top {
+
+}
+
+.meta-comment-single-top .url {
+
+	color: darkRed;
+
+}
+
+/**
+Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to use tables instead and you can just sit there and judge me. Tables take 5 seconds to get to work, this could go on for another hour. 
+.entry-top h1 {
+
 	float: left;
 	width: 75%;
-	height: 100%;
+	padding-right: 10px;
 	vertical-align: bottom;
+	height: auto;
+	font-weight: bold;
+	font-size: 2.80em;
 
 }
 
@@ -814,8 +881,13 @@ p {margin-bottom: 1.143em;}
 	float: right;
 	width: 25%;
 	margin-bottom: 8px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	height: auto;
+	font-size: .92em;
 	
-}
+}**/
 
 .single .entry-sub-container {
 

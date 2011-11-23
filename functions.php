@@ -38,6 +38,9 @@ include('library/extensions/standout-extensions.php');
 //Adding custom font for headlines.
 function nmwp_fonts() {
 	echo "<link href='http://fonts.googleapis.com/css?family=Nobile:400,700' rel='stylesheet' type='text/css'>";
+	
+
+	
 }
 
 add_action('wp_head', 'nmwp_fonts');

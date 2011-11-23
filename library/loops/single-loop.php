@@ -33,49 +33,86 @@ function childtheme_override_single_post() {
 					
 					?>
 					<div class="entry-top">
-						
-							<?php the_title('<h1>', '</h1>'); ?>
-						
-						
-						<div class="entry-meta">
-						<?php
-						
-						// Create $posteditlink    
-						$posteditlink .= '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
-						$posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
-						$posteditlink .= __('Edit', 'thematic') . '</a>';
-						
-						$postmeta_issingle .= '<span class="meta-prep meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
-						$postmeta_issingle .= '<span class="entry-date"><abbr class="published" title="';
-						$postmeta_issingle .= get_the_time(thematic_time_title()) . '">';
-						$postmeta_issingle .= time_ago();
-						$postmeta_issingle .= ' at ';
-						$postmeta_issingle .= get_the_time();
-						$postmeta_issingle .= ' on ';
-						$postmeta_issingle .= get_the_date();
-						$postmeta_issingle .= '</abbr></span>';
-			  
-						
-						
-						//Display author info area
-						
-						$postauthor .= '<span class="meta-prep meta-prep-author">' . __(' by ', 'thematic') . '</span>';	
-						$postauthor .= '<span class="author vcard">'. '<a class="url fn n" rel="author" href="';
-						$postauthor .= get_author_link(false, $authordata->ID, $authordata->user_nicename);
-						$postauthor .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
-						$postauthor .= get_the_author();
-						$postauthor .= '</a></span></h2>';
-						
-						// Display edit link
-						if (current_user_can('edit_posts')) {
-							$postmeta_edit .= ' <span class="meta-sep meta-sep-edit">|</span> ' . '<span class="edit">' . $posteditlink . '</span>';
-						}     
+							<table>
+								<tbody>
+								<tr>
+									<td width="75%" valign="baseline" >
+										<?php the_title('<h1>', '</h1>'); ?>
+									</td>
+								
+									<td width="25%" valign="baseline">
+										<p class="entry-meta">
+										<?php
+										
+										global $id, $post, $authordata;
+										
+										// Create $posteditlink    
+										$posteditlink .= '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
+										$posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
+										$posteditlink .= __('Edit', 'thematic') . '</a>';
+										
+										$postmeta_issingle .= '<span class="meta-prep meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
+										$postmeta_issingle .= '<span class="entry-date"><abbr class="published" title="';
+										$postmeta_issingle .= get_the_time(thematic_time_title()) . '">';
+										$postmeta_issingle .= time_ago();
+										$postmeta_issingle .= ' at ';
+										$postmeta_issingle .= get_the_time();
+										$postmeta_issingle .= ' on ';
+										$postmeta_issingle .= get_the_date();
+										$postmeta_issingle .= '</abbr></span>';
+							  
+										
+										
+										//Display author info area
+										
+										$postauthor .= '<span class="meta-prep meta-prep-author">' . __(' by ', 'thematic') . '</span>';	
+										$postauthor .= '<span class="author vcard">'. '<a class="url fn n" rel="author" href="';
+										$postauthor .= get_author_link(false, $authordata->ID, $authordata->user_nicename);
+										$postauthor .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
+										$postauthor .= get_the_author();
+										$postauthor .= '</a></span></h2>';
+										
+										//comment count
+										
+										$postcomments .= "<span class='meta-prep meta-prep-comments'> with </span>"; 
+										$postcomments .= "<span class='meta-comment-single-top'>";
+										
+										 $num_comments = get_comments_number(); // for some reason get_comments_number only returns a numeric value displaying the number of comments
+										 if ( comments_open() ){
+											  if($num_comments == 0){
+												  $comments = __('no comments');
+											  }
+											  elseif($num_comments > 1){
+												  $comments = $num_comments. __(' comments');
+											  }
+											  else{
+												   $comments ="one comment";
+											  }
+										 $write_comments = '<a href="' . get_comments_link() .'" class="url fn n">'. $comments.'</a>';
+										 }
+										 else{$write_comments =  __('comments disabled');}
+										
+										$postcomments .= $write_comments;
+										$postcomments .= "</span>";
+										
+										// Display edit link
+										if (current_user_can('edit_posts')) {
+											$postmeta_edit .= ' <span class="meta-sep meta-sep-edit">|</span> ' . '<span class="edit">' . $posteditlink . '</span>';
+										}     
 
-						
-						echo $postmeta_issingle . $postauthor . $postmeta_edit;
-						
-						?>
-						</div><!-- .entry-meta -->
+										
+										echo $postmeta_issingle . $postauthor . $postcomments . $postmeta_edit;
+										
+										/**echo "<span class='meta-comment-single-top'>";
+										comments_number();
+										echo "</span>";**/
+										
+										?>
+										</p><!-- .entry-meta -->
+									</td>
+								</tr>
+							</tbody>
+							</table>
 					</div>
 					<div class="clear"></div>
 					<div class="entry-sub-container">
