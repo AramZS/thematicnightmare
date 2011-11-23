@@ -852,11 +852,17 @@ p {margin-bottom: 1.143em;}
 
 }
 
+.entry-top a {
+
+	color: darkRed;
+
+}
+
 .meta-comment-single-top {
 
 }
 
-.meta-comment-single-top .url {
+.meta-comment-single-top a {
 
 	color: darkRed;
 

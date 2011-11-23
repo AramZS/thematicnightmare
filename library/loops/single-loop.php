@@ -67,7 +67,7 @@ function childtheme_override_single_post() {
 										
 										$postauthor .= '<span class="meta-prep meta-prep-author">' . __(' by ', 'thematic') . '</span>';	
 										$postauthor .= '<span class="author vcard">'. '<a class="url fn n" rel="author" href="';
-										$postauthor .= get_author_link(false, $authordata->ID, $authordata->user_nicename);
+										$postauthor .= get_author_posts_url(get_the_author_meta( 'ID' ));
 										$postauthor .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
 										$postauthor .= get_the_author();
 										$postauthor .= '</a></span></h2>';
