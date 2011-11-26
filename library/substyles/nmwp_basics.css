@@ -7,7 +7,14 @@ body {
 	font-size: 14px;
 	/**background-image: url('library/imgs/wrap.png');**/
 	background-color: #181818;
-	background-repeat:repeat;
+	background-image: url('../imgs/bg-colorful-d2.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-position: right bottom;
+	    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 	
 }
 
