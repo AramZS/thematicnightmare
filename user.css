@@ -792,10 +792,10 @@ p {margin-bottom: 1.143em;}
 	
 }  
 
-/** Theming for single **/
+/** Theming for single / page **/
 
 
-.single .hentry {
+.single .hentry, .page .hentry {
 
 	background: transparent;
 	border: 0;
@@ -806,7 +806,7 @@ p {margin-bottom: 1.143em;}
 
 }
 
-.single .entry-top {
+.single .entry-top, .page .entry-top {
 
 	padding: 0 12px;
 	vertical-align: bottom;
@@ -816,7 +816,7 @@ p {margin-bottom: 1.143em;}
 
 }
 
-.single .entry-top table, .single .entry-top tr {
+.single .entry-top table, .single .entry-top tr, .page .entry-top table, .page .entry-top tr {
 	
 	border: 0;
 	margin: 0;
@@ -825,7 +825,7 @@ p {margin-bottom: 1.143em;}
 
 }
 
-.single .entry-top td {
+.single .entry-top td, .page .entry-top td {
 
 	padding: 0;
 	vertical-align: bottom;
@@ -895,7 +895,7 @@ Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to u
 	
 }**/
 
-.single .entry-sub-container {
+.single .entry-sub-container, .page .entry-sub-container {
 
 	padding: 0 12px;
 	background: white;
