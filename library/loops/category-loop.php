@@ -24,6 +24,7 @@ function childtheme_override_category_loop() {
 			
 				<address class="post-meta">
 					Written by <a href="<?php echo get_site_url(); ?>/author/<?php the_author_meta('user_nicename'); ?>/" rel="author" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"><?php the_author(); ?></a> on <time><?php the_time( 'F j, Y' ); ?> at <?php the_time('g:i a'); ?></time>
+					<a href="<?php echo get_site_url(); ?>/author/<?php the_author_meta('user_nicename'); ?>/" rel="author" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"><?php echo get_avatar( get_the_author_meta('ID'), 32 ); ?></a>
 				</address><!--/post-meta-->
 				<div class="frontpageFB">
 					<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php the_permalink(); ?>" show_faces="false" width="380" action="recommend" font=""></fb:like>

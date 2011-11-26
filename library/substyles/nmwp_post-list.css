@@ -53,10 +53,19 @@ h1.post-title{
 	background-color:#AC1C25;
 	text-transform:uppercase;
 	font-style:normal;
+	height: 22px;
 }
 
 .post-meta a, .post-meta a:link{
 	color:white;
+}
+
+.post-meta .avatar {
+
+	float: right;
+	margin-right: -9px;
+	margin-top: -5px;
+
 }
 
 
@@ -67,7 +76,7 @@ h1.post-title{
 
 }
 
-.hentry footer span{
+.hentry footer .comments-link{
 	padding:0px 15px;
 	
 }
