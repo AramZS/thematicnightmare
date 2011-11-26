@@ -362,5 +362,25 @@ include('library/loops/category-loop.php');
 include('library/loops/search-loop.php');
 
 include('library/loops/tag-loop.php');
+
+add_action( 'pre_get_posts', 'wpse18412_pre_get_posts' );
+function wpse18412_pre_get_posts( &$wp_query )
+{
+    if ( $wp_query->is_feed() ) {
+        $post_format_tax_query = array(
+            'taxonomy' => 'post_format',
+            'field' => 'slug',
+            'terms' => 'post-format-aside', // Change this to the format you want to exclude
+            'operator' => 'NOT IN'
+        );
+        $tax_query = $wp_query->get( 'tax_query' );
+        if ( is_array( $tax_query ) ) {
+            $tax_query = $tax_query + $post_format_tax_query;
+        } else {
+            $tax_query = array( $post_format_tax_query );
+        }
+        $wp_query->set( 'tax_query', $tax_query );
+    }
+}
 	
 ?>
