@@ -31,7 +31,7 @@ header a {
 #branding {
 
 	height: 150px;
-	margin-bottom: 4px;
+	margin-bottom: 0;
 	padding: 0;
 	background-color: transparent;
 
@@ -220,7 +220,7 @@ nav {
 
 	height: 46px;
 	margin: 0 auto;
-	margin-top: 8px;
+	margin-top: 0;
 	background-color: #ac1c25;
 	width: 100%;
 	overflow: hidden;
