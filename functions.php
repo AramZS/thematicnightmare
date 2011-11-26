@@ -383,5 +383,9 @@ include('library/loops/single-loop.php');
 include('library/loops/archive-loop.php');
 
 include('library/loops/category-loop.php');
+
+include('library/loops/search-loop.php');
+
+include('library/loops/tag-loop.php');
 	
 ?>
