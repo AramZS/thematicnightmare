@@ -350,7 +350,7 @@ function nmwp_main_loop() {
 					<?php the_post_thumbnail( 'homepage-thumb' ); ?>
 				</a>
 			<?php } else { ?>
-				<a href="<?php the_permalink(); ?>"><img class="postimg" src="<?php bloginfo('template_directory'); ?>/library/imgs/dummy.png" alt="" /></a>
+				
 			<?php } ?> <!-- Thumbnail -->
 			
 			<div class="entry">
@@ -379,5 +379,7 @@ function nmwp_main_loop() {
 }
 	
 include('library/loops/single-loop.php');
+
+include('library/loops/archive-loop.php');
 	
 ?>
