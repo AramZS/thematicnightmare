@@ -363,8 +363,11 @@ include('library/loops/search-loop.php');
 
 include('library/loops/tag-loop.php');
 
-add_action( 'pre_get_posts', 'wpse18412_pre_get_posts' );
-function wpse18412_pre_get_posts( &$wp_query )
+
+//Action to filter asides out of RSS feed.
+//Via http://wordpress.stackexchange.com/questions/18412/how-to-exclude-posts-of-a-certain-format-from-the-feed
+add_action( 'pre_get_posts', 'noaside_pre_get_posts' );
+function noaside_pre_get_posts( &$wp_query )
 {
     if ( $wp_query->is_feed() ) {
         $post_format_tax_query = array(
