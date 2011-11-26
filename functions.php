@@ -331,6 +331,7 @@ function nmwp_main_loop() {
 		<?php while (have_posts()) : the_post(); 
 			//formats are stored in individual php files in the main directory in the filename convention of 
 			//format-formatname.php. Nifty.
+			//Via http://www.netmagazine.com/features/wordpress-post-formats-made-easy
 		  if(!get_post_format()) {
                get_template_part('format', 'standard');
           } else {
