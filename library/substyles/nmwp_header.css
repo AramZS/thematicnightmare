@@ -372,7 +372,7 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 	margin-top: -72px;
 	margin-right: 28px;
 	padding: 4px 10px;
-	background-image:url(library/imgs/black-trans.png);
+	background-image:url(../imgs/black-trans.png);
 	background-color: transparent;
 	background-repeat: repeat;
 	color: white;
