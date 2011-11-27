@@ -1,5 +1,7 @@
 <?php
-function childtheme_override_search_loop() {
+function childtheme_override_author_loop() {
+
+  
 
   
 		global $options, $blog_id;
@@ -20,8 +22,6 @@ function childtheme_override_search_loop() {
 		}
 
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-		
-	
   
   
   //Establish the array to hold the arguments for the query_posts
@@ -60,6 +60,7 @@ function childtheme_override_search_loop() {
 	</div>
 	<?php
 	wp_reset_query();
+
 
 }
 ?>

@@ -386,6 +386,8 @@ include('library/loops/search-loop.php');
 
 include('library/loops/tag-loop.php');
 
+include('library/loops/author-loop.php');
+
 
 //Action to filter asides out of RSS feed.
 //Via http://wordpress.stackexchange.com/questions/18412/how-to-exclude-posts-of-a-certain-format-from-the-feed
