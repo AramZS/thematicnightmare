@@ -50,12 +50,15 @@
 	margin-bottom: -.24em;
 	font-family: 'Nobile', Arial, Helvetica, sans-serif;
 	padding-right: 20px;
+	margin-right: 10px;
 
 }
 
 .entry-top .entry-meta {
 
 	margin-bottom: 2px;
+	padding-left: 6px;
+	border-left: 2px solid grey;
 
 }
 
