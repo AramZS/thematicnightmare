@@ -313,6 +313,25 @@ add_filter('get_the_excerpt', 'nmpress_killer_excerpt');
 
 function nmwp_main_loop() {
 
+		global $options, $blog_id;
+		
+		foreach ($options as $value) {
+		    if (get_option( $value['id'] ) === FALSE) { 
+		        $$value['id'] = $value['std']; 
+		    } else {
+		    	if (THEMATIC_MB) 
+		    	{
+		        	$$value['id'] = get_option($blog_id,  $value['id'] );
+		    	}
+		    	else
+		    	{
+		        	$$value['id'] = get_option( $value['id'] );
+		    	}
+		    }
+		}
+
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		
 	//Remember that global variable I called a while back? Let's bring it back. 
   global $firstslide;
   
@@ -321,7 +340,7 @@ function nmwp_main_loop() {
 	/**Here post__not_in expects an array. You'd think you could put a comma seperated
 	string here and that would be fine, but you can't. Instead you have to explode the comma seperated list into an array**/
 	'post__not_in' => explode(",", $firstslide),
-	'posts_per_page' => 10
+	'paged' => get_query_var('paged')
 	);
   
 	query_posts($args);

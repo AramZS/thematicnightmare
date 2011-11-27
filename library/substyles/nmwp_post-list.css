@@ -64,7 +64,9 @@ h1.post-title{
 
 	float: right;
 	margin-right: -9px;
-	margin-top: -5px;
+	margin-top: -11px;
+	padding: 4px 5px;
+	border: #AC1C25 solid 2px;
 
 }
 
