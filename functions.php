@@ -410,5 +410,8 @@ function noaside_pre_get_posts( &$wp_query )
         $wp_query->set( 'tax_query', $tax_query );
     }
 }
-	
+
+
+include('library/extensions/sidebartop-extensions.php');
+
 ?>
