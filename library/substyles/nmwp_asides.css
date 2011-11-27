@@ -41,14 +41,23 @@
 
 .asidetype .responses a{
 
+	background-image: url('../imgs/link-img.png');
+	background-position: left center;
 	color: white;
+	padding-left: 30px;
+	background-repeat: no-repeat;
+	height: 24px;
+	text-decoration: none;
 
 }
 
 .asidetype .responses a:hover{
 
 	color: #e26fab;
-	text-decoration: underline;
+	text-decoration: none;
+	background-image: url('../imgs/link-img-hover.png');
+	background-position: left center;
+	background-repeat: no-repeat;
 
 }
 
