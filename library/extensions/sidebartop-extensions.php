@@ -37,6 +37,28 @@ function sidebaradtop() {
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/library/imgs/300x250TestAd.png" />
 					<?php endif; ?>  
 </div><!-- end Ad block -->
+
+<?php
+
+if (is_single()) {
+
+	if (has_post_format('aside'))
+	{
+	}
+	else
+	{
+
+		?>
+			<div id="bonusbox" class="aside main-aside">
+			</div>
+		<?php
+		
+	}
+	
+}
+
+?>
+
 <?php
 }
 add_action('thematic_abovemainasides', 'sidebaradtop');
