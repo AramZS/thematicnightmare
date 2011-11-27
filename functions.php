@@ -82,10 +82,10 @@ function nmwp_cycler_script() {
 				$('#featured').cycle({
 					fx: 'fade',
 					delay: 2000,
-					timeout: 1000,
+					timeout: 7000,
 					autostop: false,
-					pause: true,
-					speed: 2000,
+					pause: true
+					
 				});
 			
 	</script>
