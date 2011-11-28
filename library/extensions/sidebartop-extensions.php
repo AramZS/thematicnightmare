@@ -31,12 +31,12 @@ add_action( 'widgets_init', 'nmwp_widgets_sidebar_init' );
 // Thumbs and custom field
 function sidebaradtop() {
 ?>
-<div id="sidebar-top-ad" class="aside main-aside">
-					<?php if ( !function_exists('dynamic_sidebar')
-					|| !dynamic_sidebar('Ad Sidebar Top') ) : ?>
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/library/imgs/300x250TestAd.png" />
-					<?php endif; ?>  
-</div><!-- end Ad block -->
+	<div id="sidebar-top-ad" class="aside main-aside">
+						<?php if ( !function_exists('dynamic_sidebar')
+						|| !dynamic_sidebar('Ad Sidebar Top') ) : ?>
+							<img src="<?php bloginfo('stylesheet_directory'); ?>/library/imgs/300x250TestAd.png" />
+						<?php endif; ?>  
+	</div><!-- end Ad block -->
 
 <?php
 
@@ -49,8 +49,32 @@ if (is_single()) {
 	{
 
 		?>
-			<div id="bonusbox" class="aside main-aside">
+		<div id="sidebar-top-container" class="aside main-aside">
+
+			<div id="sharebox">
+					<div class="social-centerer">
+						<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php the_permalink(); ?>" show_faces="false" width="290" action="recommend" font=""></fb:like>
+					</div>
+					<br />
+					<div class="social-centerer">
+						<div class="stumble-button socialtab left">
+							<script src="http://www.stumbleupon.com/hostedbadge.php?s=2"></script>
+						</div>
+						
+						<div class="plus-button socialtab left">
+							<g:plusone size="medium" href="<?php the_permalink(); ?>"></g:plusone>
+						</div>
+					
+						<div class="facebook-button socialtab left">
+							<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-count="horizontal" data-via="nitemaremodenet">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+						</div>
+					</div>
+			</div>			
+			<div id="bonusbox">
+				
 			</div>
+			
+		</div>
 		<?php
 		
 	}

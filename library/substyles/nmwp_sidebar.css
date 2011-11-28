@@ -22,6 +22,73 @@
 
 #bonusbox {
 
-	clear:right;
+	width: 300px;
+	height: 200px;
+	background-color: white;
+	margin-left: -18px;
+	padding-left: 18px;
+	border: 2px solid #8A165F;
+	border-left: 0;
+	position: relative;
+	z-index: -1000;
+	-moz-border-top-right-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-o-border-top-right-radius: 20px;
+	border-top-right-radius: 20px;
+	-moz-border-bottom-right-radius: 20px;
+	-webkit-border-bottom-right-radius: 20px;
+	-o-border-bottom-right-radius: 20px;
+	border-bottom-right-radius: 20px;	
+	
+}
 
+#sharebox {
+
+	width: 300px;
+	height: 80px;
+	background-color: white;
+	margin-left: -18px;
+	padding-left: 18px;
+	padding-top: 12px;
+	margin-top: 4px;
+	margin-bottom: 10px;
+	border: 2px solid #8A165F;
+	border-left: 0;
+	position: relative;
+	z-index: -1000;
+	-moz-border-top-right-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-o-border-top-right-radius: 20px;
+	border-top-right-radius: 20px;
+	-moz-border-bottom-right-radius: 20px;
+	-webkit-border-bottom-right-radius: 20px;
+	-o-border-bottom-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+
+}
+
+#sidebar-top-container {
+
+	clear: right;
+	margin-bottom: 10px;
+
+}
+
+.socialtab {
+
+	margin-right: 19px;
+
+}
+
+.social-centerer {
+
+	margin: 0 auto;	
+	padding-left: 8px;
+
+}
+
+.facebook-button {
+
+	margin-left: -30px;
+	
 }

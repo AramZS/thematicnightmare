@@ -109,7 +109,7 @@ Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to u
 
 	padding: 0 12px;
 	background: white;
-	border: 1px solid #E0E0E0;
+	border: 0px solid #E0E0E0;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-o-border-radius: 10px;
