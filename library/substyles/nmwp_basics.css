@@ -57,6 +57,12 @@ a, a:link {
 	
 }
 
+a:hover {
+
+	color: #ff4b5a;
+	
+}
+
 /**posts**/
 
 #main {

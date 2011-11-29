@@ -9,21 +9,27 @@
 
 #sidebar-top-ad {
 
+	width: 300px;
+	padding: 0 4px;
 	clear:right;
+	margin-bottom: 0;
+	margin-top: 0;
 
 }
 
 #sidebar-mid-ad {
 
+	width: 300px;
+	padding: 0 4px;
 	clear:right;
-	margin-bottom: 22px;
-
+	margin-bottom: 0;
+	margin-top: 0;
+	
 }
 
-#bonusbox {
+/**#bonusbox {
 
 	width: 300px;
-	height: 200px;
 	background-color: white;
 	margin-left: -18px;
 	padding-left: 18px;
@@ -40,7 +46,7 @@
 	-o-border-bottom-right-radius: 20px;
 	border-bottom-right-radius: 20px;	
 	
-}
+}**/
 
 #sharebox {
 
@@ -51,7 +57,8 @@
 	padding-left: 18px;
 	padding-top: 12px;
 	margin-top: 4px;
-	margin-bottom: 10px;
+	/**margin-bottom: 10px; temp-until bonusbox is implemented**/
+	margin-bottom: -8px;
 	border: 2px solid #8A165F;
 	border-left: 0;
 	position: relative;
@@ -91,4 +98,110 @@
 
 	margin-left: -30px;
 	
+}
+
+#primary {
+
+	border: 0;
+	margin-bottom: 2px;
+	padding-top: 0;
+	padding-bottom: 0;
+
+}
+
+#primary ul {
+
+	padding: 0 0;
+	
+}
+
+#primary .xoxo {
+
+	margin-bottom: 0;
+
+}
+
+#primary .xoxo .widgetcontainer {
+
+	background: white;
+	border: 1px solid #C4B8C1;
+	padding: 8px 21px;
+	margin: 12px auto;
+	padding-top: 0;
+	border-top: 0;
+
+}
+
+#primary .xoxo .widgetcontainer h3 {
+
+	background: #C4B8C1;
+	border-bottom: 1px solid #c4aebf;
+	color: #111;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px 15px;
+	margin-bottom: 4px;
+	width:276px;
+	margin-left: -21px;
+	font-style: normal;
+
+}
+
+#secondary {
+
+	border: 0;
+	margin-bottom: 2px;
+	margin-top: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: 1em;
+
+}
+
+#secondary ul {
+
+	padding: 0 0;
+	
+}
+
+#secondary .xoxo {
+
+	margin-bottom: 0;
+
+}
+
+#secondary .xoxo .widgetcontainer {
+
+	color: white;
+	padding: 8px 21px;
+	margin: 12px auto;
+	padding-top: 0;
+	border-top: 0;
+
+}
+
+#secondary .xoxo .widgetcontainer a {
+
+	color: white;
+
+}
+
+#secondary .xoxo .widgetcontainer a:hover {
+
+	color: #ff4b5a;
+
+}
+
+
+#secondary .xoxo .widgetcontainer h3 {
+
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px 15px;
+	margin-bottom: 4px;
+
+
+	font-style: normal;
+
 }

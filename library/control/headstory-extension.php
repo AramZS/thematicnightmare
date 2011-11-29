@@ -21,7 +21,7 @@ while ( $query->have_posts() ) : $query->the_post();
 		<?php
 		}
 		?>
-		<div class="rec-head-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>">
+		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>"><div class="rec-head-title">
 		
 		<?php
 		if (strlen($post->post_title) > 60) {
@@ -31,7 +31,7 @@ while ( $query->have_posts() ) : $query->the_post();
 			the_title();
 		}
 		?>
-		</a></div>
+		</div></a>
 		<?php
 endwhile;
 

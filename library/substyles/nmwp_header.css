@@ -176,6 +176,12 @@ header a {
 
 }
 
+.rec-head-title:hover {
+
+	color: red;
+
+}
+
 .rec-head-title a:link{
 
 	color: white;
@@ -378,6 +384,13 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 	color: white;
 	z-index: 1000;
 
+
+}
+
+
+.slider-item-title:hover {
+
+	color: red;
 
 }
 
