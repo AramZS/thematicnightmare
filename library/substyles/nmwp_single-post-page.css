@@ -116,3 +116,109 @@ Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to u
 	border-radius: 10px;
 
 }
+
+.nav-previous .prevlink-box .left {
+
+	border-top-left-radius: 100px 50px;
+	border-bottom-left-radius: 100px 50px;
+	overflow: hidden;
+	background-image: url(../imgs/black-trans.png);
+	background-color: transparent;
+	background-repeat: repeat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.2em;
+	height: 60px;
+	vertical-align: top;
+	width: 100%;
+
+}
+
+#nav-below table {
+
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	border: 0;
+
+}
+
+#nav-below tr {
+
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	border: 0;
+
+}
+
+#nav-below td {
+
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	border: 0;
+	vertical-align: top;
+
+}
+
+.nav-next { overflow: hidden; width: 47%; }
+.nav-previous { overflow: hidden; width: 47%; }
+
+.prevlink-title{
+
+	color: white;
+	font-style: normal;
+	padding: 4px 16px;
+	max-width: 225px;
+
+}
+
+.nextlink-title{
+
+	color: white;
+	font-style: normal;
+	padding: 4px 16px;
+	max-width: 225px;
+	text-align: right;
+
+}
+
+.nav-previous .prevlink-box .left img {
+
+	border-top-left-radius: 100px 50px;
+	border-bottom-left-radius: 100px 50px;
+	border: 1px inset black;
+	border-left: 0;
+	width: 75px;
+	height: 60px;
+
+}
+
+.nav-next .nextlink-box .right {
+
+	border-top-right-radius: 100px 50px;
+	border-bottom-right-radius: 100px 50px;
+	overflow: hidden;
+	background-image: url(../imgs/black-trans.png);
+	background-color: transparent;
+	background-repeat: repeat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.2em;
+	height: 60px;
+	vertical-align: top;
+	width: 100%;
+
+}
+
+.nav-next .nextlink-box .right img {
+
+	border-top-right-radius: 100px 50px;
+	border-bottom-right-radius: 100px 50px;
+	border: 1px inset black;
+	border-left: 0;
+	width: 75px;
+	height: 60px;
+
+}
