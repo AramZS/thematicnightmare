@@ -414,4 +414,6 @@ function noaside_pre_get_posts( &$wp_query )
 
 include('library/extensions/sidebartop-extensions.php');
 
+include('library/extensions/contentbelow-extensions.php');
+
 ?>
