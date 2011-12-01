@@ -219,9 +219,9 @@ add_action( 'wp_head', 'nmwp_altermenuclass' );
 /**Going to enact the crazy author fix to get this working with Google authors.**/
 /**Don't forget to apply the Google Profile author fix to Author pages, otherwise that stupid code is all for naught**/
 
-function nmwp_afterpostauthor() {
-	
-	
+function nmwp_afterpostauthor($content) {
+	if(is_single()) {
+	echo $content;
 	if ( get_the_author_meta('description') ) : ?>
 		<div class="clear"></div>
 		<div class="author-bio">
@@ -246,14 +246,17 @@ function nmwp_afterpostauthor() {
 			</div><!-- author-text --> 
 			<div class="clear"></div>
 		</div><!-- author-bio -->
+		
 		<br />
-	<?php endif; ?>
-	
-	<?php
+	<?php endif; 
+	}
+	else {
+		return $content;
+	}
 	
 }
 
-add_action('thematic_belowpost','nmwp_afterpostauthor');
+add_filter('the_content','nmwp_afterpostauthor');
 
 /*function remove_doctype() {
 	remove_filter('thematic_create_doctype', $content)
