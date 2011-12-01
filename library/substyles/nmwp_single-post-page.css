@@ -9,7 +9,7 @@
 	padding-left: 0;
 	padding-right: 0;
 	padding-top: 8px;
-	padding-bottom: 12px;
+	padding-bottom: 0;
 
 }
 
@@ -104,6 +104,12 @@ Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to u
 	font-size: .92em;
 	
 }**/
+
+.entry-utility {
+
+	padding-bottom: 20px;
+
+}
 
 .single .entry-sub-container, .page .entry-sub-container {
 
