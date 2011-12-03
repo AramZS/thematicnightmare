@@ -3,5 +3,54 @@
 #respond {
 
 	padding: 18px;
+	margin-bottom: 0;
+	padding-bottom: 40px;
+	
+}
+
+#comments-list h3 {
+
+	background-color: white;
+	padding-left: 12px;
+	
+}
+
+#respond {
+
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	
+}
+
+#comments-list ol {
+
+	border: 0;
+	border-bottom: 1px solid transparent;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	overflow: hidden;
+	background-color: white;
+	
+}
+
+#comments-list li.alt {
+
+	background-color: transparent;
+	
+}
+
+#comments-list li {
+
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+	
+}
+
+div.comment-reply-link {
+
+	border-bottom: 1px solid grey;
+	padding-bottom: 8px;
+	margin-bottom: 18px;
 	
 }

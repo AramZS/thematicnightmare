@@ -115,7 +115,14 @@ function childtheme_options() {
 			"id" => "nmwp_fb_app_ID",
 			"std" => "",
 			"type" => "text"
-		)	
+		),
+
+	array ( "name" => __('Facebook OpenGraph Description','thematic'),
+			"desc" => __('This field contains the text that will show up below the site name when the homepage is shared on Facebook. No longer than 300 characters.','thematic'),
+			"id" => "nmwp_fb_og_descrip",
+			"std" => "",
+			"type" => "text"
+		)
 		
 		
  );

@@ -194,7 +194,7 @@ Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to u
 
 	border-top-left-radius: 100px 50px;
 	border-bottom-left-radius: 100px 50px;
-	border: 1px inset black;
+	border: 0px inset black;
 	border-left: 0;
 	width: 75px;
 	height: 60px;
@@ -222,9 +222,35 @@ Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to u
 
 	border-top-right-radius: 100px 50px;
 	border-bottom-right-radius: 100px 50px;
-	border: 1px inset black;
+	border: 0px inset black;
 	border-left: 0;
 	width: 75px;
 	height: 60px;
 
+}
+
+.prevlink-box {
+
+	overflow:hidden;
+	
+}
+
+.nextlink-box {
+
+	overflow:hidden;
+	
+}
+
+.prevlink-box .left:hover {
+
+	/**background-color: #ff4b5a;**/
+	background-image: url(../imgs/pink-trans.png);
+	background-color: transparent;
+	
+}
+
+.nextlink-box .right:hover {
+
+	background-image: url(../imgs/pink-trans.png);
+	background-color: transparent;
 }
