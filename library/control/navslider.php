@@ -188,12 +188,12 @@ function childtheme_override_access() {
 				
 	wp_reset_postdata();
 	?>
-	</div>
+	</aside>
 	<?php
 	return $firstslide; 
 	?>	
 			
-		</aside>
+		
 		
 <?php 
 		
