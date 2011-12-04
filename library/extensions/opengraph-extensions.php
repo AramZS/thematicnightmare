@@ -65,7 +65,7 @@ function nmwp_opengraph() /*function opens*/{
 				// I think the approprite hooks for a single are in the file all_in_one_seo_pack.php.
 				//Line 825 to 835. 
 				
-			//Getting single post description from either the All in One SEO pack or the excerpt. 
+			//Getting single post description from either the All in One SEO pack or the excerpt or pull the content and make a custom excerpt where one is not provided. 
 				$description = htmlspecialchars(stripcslashes(get_post_meta($post_id, '_aioseop_description', true)));
 			if ( empty($description) == FALSE ) /*aioseo descrip opens*/{
 					?><meta property="og:description"
@@ -104,6 +104,8 @@ function nmwp_opengraph() /*function opens*/{
 						content="<?php echo $nativedescription; ?>" /><?php
 						
 					endwhile;
+					wp_reset_query();
+					wp_reset_postdata();
 				}
 			} /*no aioseo closes*/
 			//No matter what I do, the wp_title function adds spaces to the title. At least this way they are to the right of the title, not before. 
