@@ -164,8 +164,21 @@ Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to u
 	padding: 0px;
 	margin: 0px;
 	border: 0;
-	vertical-align: top;
+	vertical-align: middle;
 
+}
+
+.navimgtd {
+
+	width: 75px;
+	height: 60px;
+
+}
+
+.navtable {
+
+	height: 60px;
+	
 }
 
 .nav-next { overflow: hidden; width: 47%; }
@@ -177,6 +190,7 @@ Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to u
 	font-style: normal;
 	padding: 4px 16px;
 	max-width: 225px;
+	max-height: 52px;
 
 }
 
@@ -187,6 +201,7 @@ Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to u
 	padding: 4px 16px;
 	max-width: 225px;
 	text-align: right;
+	max-height: 52px;	
 
 }
 

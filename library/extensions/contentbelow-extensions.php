@@ -9,13 +9,13 @@ function childtheme_override_previous_post_link() {
 		
 		<a class="prevlink-box" href="<?php echo $prevPostPermalink; ?>" alt="<?php echo $prevPostTitle; ?>">
 			<div class="left">
-			<table><tr>
-			<td>
+			<table style="float:left;" class="navtable"><tr>
+			<td class="navimgtd">
 			<?php
 			$prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'homepage-thumb');
 			echo $prevthumbnail;
 			?></td>
-			<td valign="top"><div class="prevlink-title"><?php echo $prevPostTitle; ?></div></td>
+			<td valign="middle" class="navtable"><div class="prevlink-title"><?php echo $prevPostTitle; ?></div></td>
 			</tr></table>
 			</div>
 		</a>
@@ -32,11 +32,11 @@ function childtheme_override_next_post_link() {
 		
 		<a class="nextlink-box" href="<?php echo $nextPostPermalink; ?>" alt="<?php echo $nextPostTitle; ?>">
 			<div class="right">
-			<table><tr>
-			<td valign="top">
+			<table style="float:right;" class="navtable"><tr>
+			<td valign="middle" class="navtable">
 				<div class="nextlink-title"><?php echo $nextPostTitle; ?></div>
 			</td>
-			<td><?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'homepage-thumb');
+			<td class="navimgtd"><?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'homepage-thumb');
 			echo $nextthumbnail; ?></td>
 			</tr></table>
 			</div>
