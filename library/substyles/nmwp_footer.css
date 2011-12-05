@@ -3,5 +3,48 @@
 #footer {
 
 	background-color: #ac1c25;
+	color: #DDD;
 	
+}
+
+#footer a {
+
+	color: #C46AA3;
+
+}
+
+#siteinfo {
+
+	color: #DDD;
+	
+}
+
+#siteinfo a {
+
+	color: #C46AA3;
+	
+}
+
+.footer-cats {
+
+	margin: 0 auto;
+	margin-top: 16px;
+	width: 1000px;
+
+}
+
+.footer-cats ul {
+
+	display:table;
+	list-style-type: none;
+	margin: 0 auto;
+
+}
+
+.footer-cats ul li {
+
+	display:inline;
+	margin-right: 10px;
+	line-height: 28px;
+
 }

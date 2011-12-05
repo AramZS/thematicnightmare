@@ -72,6 +72,57 @@ if (is_single()) {
 			</div>			
 			<div id="bonusbox">
 				
+				<?php
+					global $post;
+					$post_id = $post;
+					$authpostid = $post->ID;
+					$getauthorid = $post->post_author;
+					
+					$authorquery = new WP_Query( array ( 'author' => $getauthorid, 'posts_per_page' => 1, 'post__not_in' => array( $authpostid ),  'post_type' => array( 'post' ) ) );
+					while ( $authorquery->have_posts() ) : $authorquery->the_post();
+					
+						?>
+						
+						<div id="bonuscontainer">
+						
+							<h5>More by <a href="<?php echo get_site_url(); ?>/author/<?php the_author_meta('user_nicename'); ?>/" rel="author" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"><?php the_author(); ?></a></h5>
+						
+							<a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark" alt="<?php the_title_attribute(); ?>">	<div class="bonustable">
+							<table class="navzero">
+							<tbody class="navzero">
+							<tr class="navzero">
+								<td class="navzero" valign="top">
+									<h4><span><a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark" alt="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></span></h4>
+								</td>
+								<td class="navzero" valign="top">
+									<div id="bonuscontent">
+										<?php if ( has_post_thumbnail() ) { ?>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+											<?php the_post_thumbnail( 'head-thumb' ); ?>
+										</a>
+										<?php } else { ?>
+										
+										<?php } ?> <!-- Thumbnail -->
+									</div>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+							</div></a>
+							<div id="bonuscomments">
+								<span><?php comments_popup_link( 'No comments yet.', 'One comment', '% comments', 'comments-link', 'Responses are off for this post'); ?></span>
+							</div>
+						</div>
+						
+						<?php
+						
+						
+					endwhile;
+					wp_reset_query();
+					wp_reset_postdata();
+				
+				?>
+				
 			</div>
 			
 		</div>

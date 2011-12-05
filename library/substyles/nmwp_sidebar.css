@@ -27,16 +27,16 @@
 	
 }
 
-/**#bonusbox {
+#bonusbox {
 
 	width: 300px;
 	background-color: white;
 	margin-left: -18px;
+	margin-top: 18px;
 	padding-left: 18px;
 	border: 2px solid #8A165F;
 	border-left: 0;
 	position: relative;
-	z-index: -1000;
 	-moz-border-top-right-radius: 20px;
 	-webkit-border-top-right-radius: 20px;
 	-o-border-top-right-radius: 20px;
@@ -46,7 +46,100 @@
 	-o-border-bottom-right-radius: 20px;
 	border-bottom-right-radius: 20px;	
 	
-}**/
+}
+
+#bonusbox a {
+
+	z-index: 1000;
+
+}
+
+#bonuscontainer {
+
+	margin: 6px 8px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #C4B8C1;
+	padding-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 6px;
+
+}
+
+#bonuscontainer table {
+
+	width: 284px;
+	vertical-align: top;
+
+}
+
+.bonustable {
+
+	margin-top: 10px;
+	border-top: 1px solid #C4B8C1;
+	padding-top: 10px;
+
+}
+
+#bonuscontainer .navzero {
+
+	vertical-align: top;
+	
+}
+
+#bonuscontainer h4 {
+
+	margin: 0;
+	padding: 0;
+	padding-right: 14px;
+	padding-left: 2px;
+	width: 92px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: right;
+
+}
+
+#bonuscontainer h4 a {
+
+	color: #222;
+	text-decoration: none;
+
+}
+
+#bonuscontainer h4 span {
+
+	padding-bottom: 0px;
+	border-bottom: 1px solid darkred;
+
+}
+
+#bonuscontainer h4 a:hover {
+
+	color: #D5737A;
+	text-decoration: none;
+
+}
+
+#bonuscontent img {
+
+	border:1px solid darkred;
+	margin-left: -7px;
+
+}
+
+#bonuscomments {
+
+	margin-top: 6px;
+	text-align: right;
+
+}
+
+#bonuscomments a {
+
+	margin-right: 12px;
+
+}
 
 #sharebox {
 
@@ -56,13 +149,12 @@
 	margin-left: -18px;
 	padding-left: 18px;
 	padding-top: 12px;
-	margin-top: 4px;
+	margin-top: 10px;
 	/**margin-bottom: 10px; temp-until bonusbox is implemented**/
 	margin-bottom: -8px;
 	border: 2px solid #8A165F;
 	border-left: 0;
 	position: relative;
-	z-index: -1000;
 	-moz-border-top-right-radius: 20px;
 	-webkit-border-top-right-radius: 20px;
 	-o-border-top-right-radius: 20px;
@@ -77,7 +169,7 @@
 #sidebar-top-container {
 
 	clear: right;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 
 }
 

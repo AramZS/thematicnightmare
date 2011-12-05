@@ -12,7 +12,7 @@
     
         <?php
         
-		nmwp_footer_pagelinks();
+		?><div class="footer-cats"><ul><?php wp_list_categories('hierarchical=0&orderby=name&title_li='); ?></ul> </div> <?php
 		
         // action hook creating the footer 
         thematic_footer();

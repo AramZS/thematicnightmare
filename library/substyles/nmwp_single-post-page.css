@@ -120,6 +120,7 @@ Stupid divs and their stupid alignment quirks. This doesn't work. I'm going to u
 	-webkit-border-radius: 10px;
 	-o-border-radius: 10px;
 	border-radius: 10px;
+	z-index: 2;
 
 }
 

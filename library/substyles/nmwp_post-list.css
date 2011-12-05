@@ -129,9 +129,9 @@ img.postimg{
 	background-color: transparent;
 }
 .hentry a:hover {
-	color:#073f84;
+	
 	background-color: transparent;
-	text-decoration: none;
+	color: #ff4b5a;
 
 }
 
