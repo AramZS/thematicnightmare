@@ -148,8 +148,8 @@ function childtheme_override_access() {
 						<?php } else { ?>
 							<a href="<?php the_permalink(); ?>"><img class="attachment-slide-thumb" src="<?php bloginfo('template_directory'); ?>/library/imgs/sliderdummy.png" alt="" /></a>
 						<?php } ?>
-						<div class="slider-item-title">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>"><div class="slider-item-title">
+							
 							<?php
 							//If title is longer than 60chars, prob not going to fit. 
 							//This isn't working, it's just outputting the elipsis. Got to fix.
@@ -160,7 +160,7 @@ function childtheme_override_access() {
 								the_title();
 							}
 							?>
-						</a></div>
+						</div></a>
 						
 					</div>
 					

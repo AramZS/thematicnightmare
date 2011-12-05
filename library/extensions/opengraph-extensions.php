@@ -55,7 +55,21 @@ function nmwp_opengraph() /*function opens*/{
 		
 				?><meta property="og:image" content="<?php echo $nmwp_fb_thumb; ?>"/><?php
 			
-			}			
+			}
+
+			if ( empty($nmwp_fb_og_descrip) == FALSE ) {
+			
+			?><meta property="og:description"
+					content="<?php echo $nmwp_fb_og_descrip; ?>" /><?php
+			} else {
+				
+				$blogtagline = get_bloginfo('description');
+				
+				?><meta property="og:description"
+						content="<?php echo $blogtagline; ?>" /><?php
+			
+			}
+			
 		}else /*single opens*/ {
 				global $post;
 				$post_id = $post;

@@ -123,7 +123,7 @@ header a {
 	float: left;
 	border: 0;
 	background-color: transparent;
-	background-image: url(library/imgs/searchbutton-t.png);
+	background-image: url('../imgs/searchbutton-t.png');
 	display: block;
 	overflow: hidden;
 	text-indent: -3000px;

@@ -70,6 +70,14 @@ h1.post-title{
 
 }
 
+.post-meta .avatar:hover {
+
+	border-top: #AC1C25 inset 2px;
+	border-bottom: #AC1C25 inset 2px;
+	/*#e26fab*/
+
+}
+
 
 .hentry footer{
 	background:#fafafa;
@@ -212,5 +220,28 @@ p {margin-bottom: 1.143em;}
 	color:#666;
 	font-size:12px;
 	line-height:150%;
+	
+}
+
+.page-title {
+
+	color: white;
+	font-size: 26px;
+	padding: 12px 0 30px 0;
+	height: auto;
+	line-height: 30px;
+
+}
+
+.paged #nav-above {
+
+	padding: 0 20px 2px 20px;
+	width: 638px;
+
+}
+
+.navigation a {
+
+	color: #C4B8C1;
 	
 }
