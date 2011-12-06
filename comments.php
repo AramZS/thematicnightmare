@@ -15,7 +15,7 @@
 endif;
 ?>
 
-<?php if ( have_comments() ) : 
+<?php 
 
 
 	if ( 'open' == $post->comment_status ) : 
@@ -92,6 +92,8 @@ endif;
 		}
 	endif /* if ( 'open' == $post->comment_status ) */ ?>
 
+<?php if ( have_comments() ) : ?>
+	
 <?php /* numbers of pings and comments */
 $ping_count = $comment_count = 0;
 foreach ( $comments as $comment )
