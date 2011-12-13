@@ -1,5 +1,18 @@
 /*sidebar*/
 
+.aside ul ul {
+
+	list-style: none;
+	margin-left: 0;
+	
+}
+
+.aside ul ul li {
+
+	margin-bottom: .2em;
+
+}
+
 .main-aside {
 
 	width: 306px;
