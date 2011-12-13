@@ -241,10 +241,17 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 	
 }
 
+.sf-menu a {
+
+	border: 0px tranparent solid;
+	
+}
+
+
 .menu ul {
 
 	list-style-type: none;
-	display: table;
+	display: table!important;
 	text-align:left;
 	margin:0 auto;
 	padding:0;
@@ -262,36 +269,36 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 
 .menu ul li {
 
-	display:inline;
-	color: white;
+	display:inline!important;
+	color: white!important;
 	height: 46px;
-	border: 0;
+	border: 0!important;
 	background-color: transparent;
-	
-}
-
-.windows .sf-menu a {
-
-	padding: 15px 16px;
-	margin-right: 6px;
-	text-decoration: none;
-	color: white;
-	border: 0;
-	background-color: transparent;
-	font-weight: bold;
-	
-}
-
-.windows .sf-menu li:first-child a {
-
-	padding-left: 1px;
 	
 }
 
 .sf-menu a {
 
-	padding: 0;
-	color: white;
+	padding: 15px 16px!important;
+	margin-right: 6px!important;
+	text-decoration: none!important;
+	color: white!important;
+	border: 0!important;
+	background-color: transparent!important;
+	font-weight: bold!important;
+	
+}
+
+.sf-menu li:first-child a {
+
+	padding-left: 1px!important;
+	
+}
+
+.sf-menu a {
+
+	padding: 0!important;
+	color: white!important;
 
 }
 
@@ -299,6 +306,7 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 
 	color: white!important;
 	background-color: transparent!important;
+	border: 0!important;
 
 }
 
