@@ -260,6 +260,7 @@
 	width:276px;
 	margin-left: -21px;
 	font-style: normal;
+	font-family: Arial,sans-serif;
 
 }
 
@@ -316,8 +317,15 @@
 	font-weight: bold;
 	padding: 10px 15px;
 	margin-bottom: 4px;
-
-
+	font-family: Arial,sans-serif;
+	padding-left: 2px;
 	font-style: normal;
 
+}
+
+#secondary ul ul {
+
+	list-style: none;
+	margin-left: 2px;
+	
 }

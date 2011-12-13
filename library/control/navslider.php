@@ -129,8 +129,8 @@ function childtheme_override_access() {
 				 ?>
 		<?php endforeach; 
 	
-		//For testing purposes:
-		$poppost = "5060,5006,4978,4924,4943,";
+		/**For testing purposes:
+		$poppost = "5060,5006,4978,4924,4943,";**/
 	
 		$popArg = array(
 							'showposts' => 5,
