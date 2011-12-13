@@ -117,7 +117,7 @@ function childtheme_override_access() {
 	?>
 		
 		
-	<?php if ( function_exists('get_stats_exclude_home') && $popPosts = get_stats_exclude_home(7,5) ) : 
+	<?php if ( function_exists('get_stats_exclude_home') && $popPosts = get_stats_exclude_home(10,6) ) : 
 	$poppost = "";
 	$post = "";
 	?>

@@ -69,9 +69,8 @@ if (is_single()) {
 							<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-count="horizontal" data-via="nitemaremodenet">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
-			</div>			
-			<div id="bonusbox">
-				
+			</div>	
+
 				<?php
 					global $post;
 					$post_id = $post;
@@ -82,6 +81,8 @@ if (is_single()) {
 					while ( $authorquery->have_posts() ) : $authorquery->the_post();
 					
 						?>
+			
+			<div id="bonusbox">
 						
 						<div id="bonuscontainer">
 						
@@ -114,6 +115,10 @@ if (is_single()) {
 							</div>
 						</div>
 						
+
+				
+			</div>
+			
 						<?php
 						
 						
@@ -122,8 +127,6 @@ if (is_single()) {
 					wp_reset_postdata();
 				
 				?>
-				
-			</div>
 			
 		</div>
 		<?php
