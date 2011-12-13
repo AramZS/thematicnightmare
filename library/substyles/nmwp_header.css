@@ -92,9 +92,22 @@ header a {
     -webkit-border-radius: 16px;
     -o-border-radius: 16px;
     border-radius: 16px;
+	
+	-o-border-top-radius: 0;
+	-moz-border-top-radius: 0;
+	-webkit-border-top-radius: 0;
 	border-top-radius: 0;
+	
+	-o-border-top-left-radius: 0;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-top-left-radius: 0;
 	border-top-left-radius: 0;
+	
+	-webkit-border-top-right-radius: 0;
+	-moz-border-top-right-radius: 0;
+	-o-border-top-right-radius: 0;
 	border-top-right-radius: 0;
+	
 	padding: 0 9px;
 	
 }
@@ -120,7 +133,7 @@ header a {
 	margin-top: 12px;
 	width: 20px;
 	height: 20px;
-	float: left;
+	float: right;
 	border: 0;
 	background-color: transparent;
 	background-image: url('../imgs/searchbutton-t.png');
@@ -128,7 +141,10 @@ header a {
 	overflow: hidden;
 	text-indent: -3000px;
 	outline: none;
+	outline-width: 0;
 	font-size: 0px;
+	position:absolute;
+	margin-left: 196px;
 
 }
 
@@ -359,8 +375,17 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
     -webkit-border-radius: 16px;
     -o-border-radius: 16px;
     border-radius: 16px;
+	
+	-o-border-top-right-radius: 0;
+	-moz-border-top-right-radius: 0;
+	-webkit-border-top-right-radius: 0;
 	border-top-right-radius: 0;
+	
+	-o-border-bottom-right-radius: 0;
+	-moz-border-bottom-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
 	border-bottom-right-radius: 0;
+	
 	overflow: hidden;
 	border-left-color:transparent;
 	
