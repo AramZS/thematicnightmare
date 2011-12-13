@@ -215,50 +215,6 @@ function nmwp_altermenuclass() {
 }
 add_action( 'wp_head', 'nmwp_altermenuclass' );
 
-
-/**Author boxes get the big bucks**/
-/**Going to enact the crazy author fix to get this working with Google authors.**/
-/**Don't forget to apply the Google Profile author fix to Author pages, otherwise that stupid code is all for naught**/
-
-function nmwp_afterpostauthor($content) {
-	if(is_single()) {
-	echo $content;
-	if ( get_the_author_meta('description') ) : ?>
-		<div class="clear"></div>
-		<div class="author-bio">
-			<div id="author-avatar">
-						<?php echo get_avatar( get_the_author_email(), '60' ); ?>
-			</div><!-- author-avatar --> 
-			<div id="author-text">
-					<h4>Post by <a href="<?php get_site_url(); ?>/author/<?php the_author_meta('user_login'); ?>/" rel="author" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"><?php the_author(); ?></a></span></h4> 
-					<p><?php the_author_description(); ?></p> 
-
-		<?php 
-			$twitterAuthorWordCount = get_the_author_meta('twitter');
-			$twitterAuthorMeta = str_word_count($twitterAuthorWordCount);
-		if ( $twitterAuthorMeta > 0) { 
-		?>
-			
-		<div class="authorSocial"><a href="http://twitter.com/<?php echo the_author_meta('twitter'); ?>" class="twitter-follow-button">Follow @<?php echo the_author_meta('twitter'); ?></a>
-		<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script></div>
-
-		<?php } ?>
-
-			</div><!-- author-text --> 
-			<div class="clear"></div>
-		</div><!-- author-bio -->
-		
-		<br />
-	<?php endif; 
-	}
-	else {
-		return $content;
-	}
-	
-}
-
-add_filter('the_content','nmwp_afterpostauthor');
-
 /*function remove_doctype() {
 	remove_filter('thematic_create_doctype', $content)
 }
