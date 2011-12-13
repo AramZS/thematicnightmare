@@ -54,6 +54,6 @@
     thematic_sidebar();
     
     // calling footer.php
-    get_footer('homepage');
+    get_footer();
 
 ?>

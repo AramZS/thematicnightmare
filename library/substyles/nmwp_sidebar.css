@@ -250,7 +250,7 @@
 
 }
 
-#primary .xoxo .widgetcontainer {
+#primary .widgetcontainer {
 
 	background: white;
 	border: 1px solid #C4B8C1;
@@ -259,6 +259,14 @@
 	padding-top: 0;
 	border-top: 0;
 	overflow: hidden;
+	-moz-border-top-right-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-o-border-top-right-radius: 10px;
+	-o-border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 
 }
 
@@ -274,8 +282,9 @@
 	font-weight: bold;
 	padding: 10px 15px;
 	margin-bottom: 4px;
-	width:276px;
+	width:273px;
 	margin-left: -21px;
+	margin-right: -21px;
 	font-style: normal;
 	font-family: Arial,sans-serif;
 	-moz-border-top-right-radius: 10px;
@@ -284,30 +293,6 @@
 	-webkit-border-top-left-radius: 10px;
 	-o-border-top-right-radius: 10px;
 	-o-border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	border-top-left-radius: 10px;
-	overflow: hidden;
-
-}
-
-.firefox #primary .xoxo .widgetcontainer h3 {
-
-	/**background: #C4B8C1;**/
-	background-image: url('../imgs/purp.png');
-	background-repeat:repeat;
-	border: 1px solid transparent;
-	border-bottom: 1px solid #c4aebf;
-	color: #111;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 10px 15px;
-	margin-bottom: 4px;
-	width:276px;
-	margin-left: -21px;
-	font-style: normal;
-	font-family: Arial,sans-serif;
-	-moz-border-top-right-radius: 10px;
-	-moz-border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	overflow: hidden;

@@ -366,13 +366,21 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 	
 }
 
+
 .ss5 {
 
 	-moz-border-radius: 16px;
     -webkit-border-radius: 16px;
     -o-border-radius: 16px;
     border-radius: 16px;
+
+	-o-border-top-left-radius: 0;
+	-moz-border-top-left-radius: 0;
+	-webkit-border-top-left-radius: 0;
 	border-top-left-radius: 0;
+	-o-border-bottom-left-radius: 0;
+	-moz-border-bottom-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
 	border-bottom-left-radius: 0;
 	overflow: hidden;
 	border-right-color: transparent;
