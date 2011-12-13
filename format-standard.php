@@ -1,4 +1,4 @@
-		<article class="hentry" <?php post_class('post'); ?> id="post-<?php the_ID(); ?>">
+		<article class="<?php thematic_post_class(); ?>" id="post-<?php the_ID(); ?>">
 			<header class="post-info">
 				<h1 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></a></h1>
 			

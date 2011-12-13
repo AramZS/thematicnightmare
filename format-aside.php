@@ -1,4 +1,4 @@
-		<article class="hentry asidetype" <?php post_class('post'); ?> id="post-<?php the_ID(); ?>">
+		<article class="asidetype <?php thematic_post_class(); ?>" id="post-<?php the_ID(); ?>">
 
 					<div class="responses">
 						<span><?php comments_popup_link( 'No responses yet.', 'One response', '% responses', 'comments-link', 'Responses are off for this post'); ?></span>

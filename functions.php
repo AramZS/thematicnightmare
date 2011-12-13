@@ -343,12 +343,13 @@ function nmwp_main_loop() {
 	/**Here post__not_in expects an array. You'd think you could put a comma seperated
 	string here and that would be fine, but you can't. Instead you have to explode the comma seperated list into an array**/
 	'post__not_in' => explode(",", $firstslide),
+	'posts_per_page' => get_option( 'posts_per_page' ),
 	'paged' => get_query_var('paged')
 	);
   
 	query_posts($args);
 
-	
+	/* Count the number of posts so we can insert a widgetized area */ $count = 1;
 	?>
 
 	<div id="post-list" class="hfeed">
@@ -363,7 +364,10 @@ function nmwp_main_loop() {
           } else {
                get_template_part('format', get_post_format());
           }
-		
+		if ($count==$thm_insert_position) {
+						get_sidebar('index-insert');
+				}
+				$count = $count + 1;
 		?>
 			<?php endwhile; ?>
 			<?php else : ?>

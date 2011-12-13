@@ -2,23 +2,14 @@
 function childtheme_override_tag_loop() {
 
   
-  //Establish the array to hold the arguments for the query_posts
-  $args = array(
-	'posts_per_page' => 10
-	);
-  
-	query_posts($args);
-
-	
 	?>
 
 	<div id="post-list" class="hfeed">
 		<!--begin the posts loop-->
-		<?php if (have_posts()) : ?>
-		<?php while (have_posts()) : the_post(); 
+		<?php 		while (have_posts()) : the_post();  
 
 		?>
-		<article class="hentry" <?php post_class('post'); ?> id="post-<?php the_ID(); ?>">
+		<article class="<?php thematic_post_class(); ?>" id="post-<?php the_ID(); ?>" >
 			<header class="post-info">
 				<h1 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></a></h1>
 			
@@ -56,12 +47,6 @@ function childtheme_override_tag_loop() {
 			</footer>
 			</article>
 			<?php endwhile; ?>
-			<?php else : ?>
-
-				<h1 class="error-title">Not Found</h1>
-				<p>Sorry, Unable to find what you are looking for. Try a different search.</p>
-			
-			<?php endif; ?>
 			
 		
 	</div>
