@@ -9,8 +9,21 @@
 
 .aside ul ul li {
 
-	margin-bottom: .2em;
+	padding-bottom: 8px;
+	padding-top: 8px;
 
+}
+
+#primary ul ul li {
+
+	border-bottom: 1px dotted #DDD;
+	
+}
+
+#primary ul ul li a {
+
+	text-decoration: none;
+	
 }
 
 .xoxo li {
