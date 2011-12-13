@@ -13,6 +13,17 @@
 
 }
 
+.xoxo li {
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	overflow:hidden;
+
+
+}
+
 .main-aside {
 
 	width: 306px;

@@ -118,6 +118,7 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'homepage-thumb', 250, 200 ); //(soft cropped)
 	add_image_size( 'head-thumb', 180, 150, true ); //(hard cropped)
 	add_image_size( 'slide-thumb', 196, 196, true ); //(hard cropped)
+	add_image_size( 'bnav-thumb', 75, 60, true ); //(hard cropped)
 }
 
 //Let's get fun places in there. We'll figure out how to fill them in a bit. 

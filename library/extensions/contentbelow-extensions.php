@@ -12,7 +12,7 @@ function childtheme_override_previous_post_link() {
 			<table style="float:left;" class="navtable"><tr>
 			<td class="navimgtd">
 			<?php
-			$prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'homepage-thumb');
+			$prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'bnav-thumb');
 			echo $prevthumbnail;
 			?></td>
 			<td valign="middle" class="navtable"><div class="prevlink-title"><?php echo $prevPostTitle; ?></div></td>
@@ -36,7 +36,7 @@ function childtheme_override_next_post_link() {
 			<td valign="middle" class="navtable">
 				<div class="nextlink-title"><?php echo $nextPostTitle; ?></div>
 			</td>
-			<td class="navimgtd"><?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'homepage-thumb');
+			<td class="navimgtd"><?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'bnav-thumb');
 			echo $nextthumbnail; ?></td>
 			</tr></table>
 			</div>
