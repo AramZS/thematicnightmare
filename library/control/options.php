@@ -122,6 +122,20 @@ function childtheme_options() {
 			"id" => "nmwp_fb_og_descrip",
 			"std" => "",
 			"type" => "text"
+		),
+
+	array ( "name" => __('Google Analytics Active','thematic'),
+			"desc" => __('Check this box to turn on your Google Analytics tracking code.','thematic'),
+			"id" => "nmwp_g_analytics_on",
+			"std" => "false",
+			"type" => "checkbox"
+		),
+		
+	array ( "name" => __('Google Analytics Code','thematic'),
+			"desc" => __('Enter your Google Analytics code here. It looks like UA-XXXXXXXX-1','thematic'),
+			"id" => "nmwp_g_analytics",
+			"std" => "",
+			"type" => "text"
 		)
 		
 		

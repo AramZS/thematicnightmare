@@ -47,6 +47,37 @@ function nmwp_fonts() {
 }
 
 add_action('wp_head', 'nmwp_fonts');
+
+//Adding Google Analytics code.
+function nmwp_g_analytics_go() {
+
+  // load the custom options
+  global $childoptions;
+  foreach ($childoptions as $value) {
+    $$value['id'] = get_option($value['id'], $value['std']);
+  }
+
+	if ( $nmwp_g_analytics_on == 'true'){
+	
+	?><!-- Google Analytics --><script type='text/javascript'>
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', '<?php echo $nmwp_g_analytics; ?>']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>;
+	
+<?php
+	}
+}
+
+add_action('wp_head', 'nmwp_g_analytics_go');
 	
 //Let's add some nice smooth opengraph functionality here to make sharing content on Facebook easier. 
 
