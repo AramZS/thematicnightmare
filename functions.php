@@ -142,11 +142,11 @@ include('library/control/controlheader.php');
 	
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 250, 200 ); // default Post Thumbnail dimensions   
+    set_post_thumbnail_size( 250, 200, true ); // default Post Thumbnail dimensions   
 }
 
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'homepage-thumb', 250, 200 ); //(soft cropped)
+	add_image_size( 'homepage-thumb', 250, 200, true ); //(soft cropped)
 	add_image_size( 'head-thumb', 180, 150, true ); //(hard cropped)
 	add_image_size( 'slide-thumb', 196, 196, true ); //(hard cropped)
 	add_image_size( 'bnav-thumb', 75, 60, true ); //(hard cropped)
