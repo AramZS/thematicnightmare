@@ -6,7 +6,13 @@ function childtheme_override_author_loop() {
 
 	<div id="post-list" class="hfeed">
 		<!--begin the posts loop-->
-		<?php while (have_posts()) : the_post(); 
+		<?php 
+		
+		rewind_posts();
+		
+		while (have_posts()) : the_post(); 
+		
+		thematic_abovepost(); 
 			//formats are stored in individual php files in the main directory in the filename convention of 
 			//format-formatname.php. Nifty.
 			//Via http://www.netmagazine.com/features/wordpress-post-formats-made-easy

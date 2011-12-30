@@ -117,6 +117,7 @@ function childtheme_override_access() {
 			<?php
 				
 	wp_reset_postdata();
+	wp_reset_query();
 	}
 	//One extra slide for popular stories. Works with the Jetpack wordpress stats stuff.
 	/**Notes on the API at http://wordpress.stackexchange.com/questions/12189/using-stats-get-csv-to-return-a-list-of-popular-posts-by-views-with-thumbnails in answers. **/
@@ -194,6 +195,7 @@ function childtheme_override_access() {
 			endif;
 				
 	wp_reset_postdata();
+	wp_reset_query();
 	?>
 	</aside>
 	<?php
