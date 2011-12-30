@@ -121,7 +121,7 @@ function childtheme_options() {
 			"desc" => __('This field contains the text that will show up below the site name when the homepage is shared on Facebook. No longer than 300 characters.','thematic'),
 			"id" => "nmwp_fb_og_descrip",
 			"std" => "",
-			"type" => "text"
+			"type" => "textarea"
 		),
 
 	array ( "name" => __('Google Analytics Active','thematic'),
@@ -261,8 +261,8 @@ $value['std'] )); ?>"
           <?php echo $value['desc']; ?>
           <textarea name="<?php echo $value['id']; ?>" 
                     id="<?php echo $value['id']; ?>" 
-                    cols="<?php echo $ta_options['cols']; ?>" 
-                    rows="<?php echo $ta_options['rows']; ?>"><?php
+                    cols="100" 
+                    rows="5"><?php
             echo stripslashes(get_option($value['id'], $value['std']));
           ?></textarea>
         </td>
