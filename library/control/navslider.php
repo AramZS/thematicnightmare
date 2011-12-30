@@ -51,7 +51,11 @@ function childtheme_override_access() {
 	//Let's start the counter at 1, we just have to account for it. 
 	$k = 1;
 	
-	
+			function filter_where( $where = '' ) {
+			// posts in the last 1 to 90 days
+			$where .= " AND post_date < '" . date('Y-m-d', strtotime('-2 days')) . "'";
+			return $where;
+			}
 	
 ?>
 		
@@ -61,8 +65,11 @@ function childtheme_override_access() {
 	foreach ($exploded_slider_cats as $value) {
 		
 		//Note the meta key here. This should only select stories with featured images, eliminating the need for if checks. 
+		add_filter( 'posts_where', 'filter_where' );
 		$sliderquery = new WP_Query( array( 'cat' => $value, 'showposts' => 5) );
+		remove_filter( 'posts_where', 'filter_where' );
 			?><div class="slide"><?php
+	
 			while ( $sliderquery->have_posts() ) : $sliderquery->the_post();
 		
 	
