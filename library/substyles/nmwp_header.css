@@ -191,6 +191,8 @@ header a {
 	color: white;
 	max-height: 56px;
 	overflow: hidden;
+	font-size: 11.5px;
+	line-height: 1.72em;
 
 }
 
