@@ -125,7 +125,11 @@ function nmwp_cycler_script() {
 			jQuery('#cycleContainer').before('<ul id="pager"></ul>').cycle({
 				//Specify options
 				fx:     'fade', //Name of transition effect
-				timeout: 0,           //Disable auto advance
+				//timeout: 0,           //Disable auto advance
+				autostop: false,
+				delay: 2000,
+				timeout: 7000,
+				pause: true,
 				pager:  '#pager',     //Selector for element to use as pager container
 				pagerAnchorBuilder: function (index) {               //Build the pager
 				return '<li><a href="#">' + titles[index] + '</a></li>';
