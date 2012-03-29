@@ -131,6 +131,8 @@ function nmwp_cycler_script() {
 				timeout: 7000,
 				pause: true,
 				pager:  '#pager',     //Selector for element to use as pager container
+				pagerEvent: 'mouseover',
+				fastOnEvent: true,
 				pagerAnchorBuilder: function (index) {               //Build the pager
 				return '<li><a href="#">' + titles[index] + '</a></li>';
 			},
