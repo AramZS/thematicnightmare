@@ -353,6 +353,18 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 
 	background-color:transparent;
 	overflow: hidden;
+	width: 1000px;
+	height: 200px;
+
+}
+
+.slide h4 {
+
+	visibility: none;
+	width: 0;
+	height: 0;
+	float: left;
+	margin-left: -1000px;
 
 }
 
