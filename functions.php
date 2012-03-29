@@ -112,17 +112,17 @@ function nmwp_cycler_script() {
 
 
 	echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>';
-	echo '<script type="text/javascript" src="' . get_bloginfo('stylesheet_directory') . '/library/extensions/jquery.cycle.all.js"></script>';
+	echo '<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>';
 	?>
 	<script type="text/javascript">
 			
 		$(document).ready(function () {
 			//From: http://www.takerootdesign.co.uk/blog/web-design/adding-named-navigation-jquery-cycle-gallery
 			//Create an array of titles
-			var titles = $('#featured div.slide').find("h4").map(function() { return $(this).text(); });
+			var titles = jQuery('#cycleContainer div.slide').find("h2").map(function() { return jQuery(this).text(); });
 			//Add an unordered list to contain the navigation
 			//Invoke the cycle plugin on #featured
-			$('#featured').before('<ul id="pager"></ul>').cycle({
+			jQuery('#cycleContainer').before('<ul id="pager"></ul>').cycle({
 				//Specify options
 				fx:     'fade', //Name of transition effect
 				timeout: 0,           //Disable auto advance
@@ -131,7 +131,7 @@ function nmwp_cycler_script() {
 				return '<li><a href="#">' + titles[index] + '</a></li>';
 			},
 			updateActivePagerLink: function(pager, currSlideIndex) {
-				$(pager).find('li').removeClass('active').filter('li:eq('+currSlideIndex+')').addClass('active');
+				jQuery(pager).find('li').removeClass('active').filter('li:eq('+currSlideIndex+')').addClass('active');
 			}
 			});
 		});		

@@ -339,7 +339,7 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 
 /**slider**/
 
-#featured {
+#cycleContainer {
 
 	height: 200px;
 	margin: 8px auto;
@@ -358,7 +358,7 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 
 }
 
-.slide h4 {
+.slide h2 {
 
 	visibility: none;
 	width: 0;

@@ -59,7 +59,7 @@ function childtheme_override_access() {
 	
 ?>
 		
-		<aside id="featured" class="bclass">
+		<aside id="cycleContainer" class="bclass">
 <?php
 	//Loop categories in use. 
 	foreach ($exploded_slider_cats as $value) {
@@ -69,7 +69,7 @@ function childtheme_override_access() {
 		$sliderquery = new WP_Query( array( 'cat' => $value, 'showposts' => 5) );
 		remove_filter( 'posts_where', 'filter_where' );
 			?><div class="slide">
-			<h4><?php echo get_cat_name($value); ?></h4>
+			<h2><?php echo get_cat_name($value); ?></h2>
 			<?php
 				
 			while ( $sliderquery->have_posts() ) : $sliderquery->the_post();
@@ -132,7 +132,7 @@ function childtheme_override_access() {
 	$post = "";
 	?>
 		<div class="slide">
-		<h4>Popular</h4>
+		<h2>Popular</h2>
 		<?php foreach ( $popPosts as $p ) :
 				 $poppost .= $p['post_id'] . ",";
 				 
