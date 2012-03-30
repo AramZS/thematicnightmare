@@ -122,7 +122,7 @@ function nmwp_cycler_script() {
 			var titles = jQuery('#cycleContainer div.slide').find("h2").map(function() { return jQuery(this).text(); });
 			//Add an unordered list to contain the navigation
 			//Invoke the cycle plugin on #featured
-			jQuery('#cycleContainer').before('<ul id="pager"></ul>').cycle({
+			jQuery('#cycleContainer').after('<ul id="pager" class="bclass"></ul>').cycle({
 				//Specify options
 				fx:     'fade', //Name of transition effect
 				//timeout: 0,           //Disable auto advance

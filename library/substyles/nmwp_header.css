@@ -468,3 +468,43 @@ background: -moz-linear-gradient(top,  #c41f2a,  #91171f); /* for firefox 3.6+ *
 	color: red;
 
 }
+
+#header #pager {
+
+	list-style-type: none;
+	margin:0 auto!important;
+	height: 26px;
+	padding-right: 70px;
+
+}
+
+#header #pager li {
+
+	display: inline;
+	float: right;
+	margin-top: -6px;
+
+}
+
+#header #pager li a {
+
+	margin: 3px 6px;
+	padding: 6px 10px 6px 10px;
+	background-color: black;
+	-moz-border-bottom-right-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-o-border-bottom-right-radius: 10px;
+	-o-border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	overflow: hidden;
+
+}
+
+#header #pager li.active a {
+
+	color: white;
+
+}
