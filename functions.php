@@ -201,7 +201,7 @@ function childtheme_override_blogtitle() { ?>
 
 <?php 
 	
-	
+	include "OpenGraphNode.php";
 
 }add_action('thematic_header','thematic_blogtitle',3);
 

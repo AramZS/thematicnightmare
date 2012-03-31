@@ -1,10 +1,33 @@
-		<?php include "OpenGraphNode.php";
+		<?php
 		
 		$page = get_the_title();
 		$node = new OpenGraphNode($page);
 		
 		$ogImage = $node->image;
 		$ogTitle = $node->title;
+		
+		$postID = get_the_ID();
+		
+		if ( (strlen($ogImage)) > 0 ){
+		
+			$imgParts = pathinfo($ogImage);
+			$imgExt = $imgParts['extension'];
+			$imgTitle = $imgParts['filename'];
+
+			$ogCacheImg = 'wp-content/uploads/' . date("o") . "/" . $postID . "-" . $imgTitle . "." . $imgExt;
+			
+			
+			if ( !file_exists($ogCacheImg) ) {
+			
+
+				copy($ogImage, $ogCacheImg);
+			
+			}
+		} else {
+		
+			$ogCacheImg = get_bloginfo(stylesheet_directory) . "/library/imgs/link.png";
+		
+		}
 		
 		?>
 		
@@ -21,7 +44,7 @@
 				<td width="24%" class="author-td" valign="bottom" align="center">
 				<div class="aside-link">
 				
-					<a href="<?php the_title(); ?>" title="<?php echo $ogTitle; ?>"><img alt="<?php echo $ogTitle; ?>" src="<?php echo $ogImage; ?>" /></a>
+					<a href="<?php the_title(); ?>" title="<?php echo $ogTitle; ?>"><img alt="<?php echo $ogTitle; ?>" src="<?php echo $ogCacheImg; ?>" /></a>
 				
 				</div>
 				</td>
