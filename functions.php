@@ -18,6 +18,11 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-formats', array( 'aside', 'link', 'quote' ) );
 }
 
+include('library/control/SmartMetaBox.php');
+include('library/control/metaboxer.php');
+
+
+
 //Altering the doctype to support FBML and OpenGraph
 function childtheme_create_doctype($content) {
     $content = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n";
