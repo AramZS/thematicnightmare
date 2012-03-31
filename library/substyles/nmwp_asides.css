@@ -6,6 +6,7 @@
 	border-top: 2px solid #AC1C25;
 	padding-bottom: 0;
 	overflow: hidden;
+	background-color:#AC1C25;
 
 }
 
@@ -22,6 +23,7 @@
 	padding-top: 0;
 	padding-bottom: 0;
 	border: 0;
+	background-color: #AC1C25;
 
 }
 
@@ -118,6 +120,7 @@
 	padding: 0;
 	margin: 0;
 	vertical-align: top;
+	background-color: white;
 
 }
 
@@ -128,4 +131,30 @@
 	margin: 0;
 	vertical-align: bottom;
 
+}
+
+/**Alterations for link type**/
+
+.aside-link {
+
+	margin: 0 auto;
+	width: 100%;
+	margin-right:-4px;
+
+}
+
+.link-td {
+
+	background-color:#AC1C25;
+	padding: 0;
+	margin: 0;
+	vertical-align: bottom;
+
+}
+
+.aside-link img {
+
+	float:left;
+	margin-left: 12px;
+	
 }
