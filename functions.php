@@ -201,6 +201,7 @@ function childtheme_override_blogtitle() { ?>
 
 <?php 
 	
+	//From http://buzzword.org.uk/2010/opengraph/#php
 	include "OpenGraphNode.php";
 
 }add_action('thematic_header','thematic_blogtitle',3);
