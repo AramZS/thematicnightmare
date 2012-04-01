@@ -8,18 +8,18 @@
 			
 			<table class="aside-table" width="100%">
 				<tr>
-				<td width="24%" class="author-td" valign="bottom" align="center">
-				<div class="aside-link">
+				<td width="24%" class="link-td" valign="top" align="center">
+				
 				
 					<img alt="Quote" src="<?php echo get_bloginfo(stylesheet_directory) . "/library/imgs/quotemark.png"; ?>" />
 				
-				</div>
+				
 				</td>
 				<td width="76%" valign="top" class="text-td">
-				<div class="aside-text left">
+				<div class="aside-text quote-text left">
 					<?php the_content(); ?><!-- Full content -->
 					
-					<div class="quote-meta">
+					<div class="quote-meta right">
 					<?php 
 					
 						echo '<div class="quote-author">';
@@ -28,14 +28,11 @@
 						echo '</div>';
 						
 						echo '<div class="quote-source">';
+						$quoteLink = SmartMetaBox::get('quote_link'); 
 						$quoteSource = SmartMetaBox::get('quote_source'); 
-						echo $quoteSource;
+						?><a href="<?php echo $quoteLink; ?>" title="<?php echo $quoteSource; ?>"><?php echo $quoteSource; ?></a><?php
 						echo '</div>';
 						
-						echo '<div class="quote-link">';
-						$quoteLink = SmartMetaBox::get('quote_link'); 
-						echo $quoteLink;
-						echo '</div>';
 					
 					?>
 					</div>
