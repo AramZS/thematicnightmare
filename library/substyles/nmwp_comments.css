@@ -54,3 +54,17 @@ div.comment-reply-link {
 	margin-bottom: 18px;
 	
 }
+
+/** livefyre styling **/
+
+#livefyre {
+
+	background-color:white!important;
+	padding: 12px!important;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+
+}
+
