@@ -20,7 +20,10 @@
 			$imgExt = $imgParts['extension'];
 			$imgTitle = $imgParts['filename'];
 
-			$ogCacheImg = 'wp-content/uploads/' . date("o") . "/" . $postID . "-" . $imgTitle . "." . $imgExt;
+			
+			//'/' . get_option(upload_path, 'wp-content/uploads') . '/' . date("o") 
+			$uploads = wp_upload_dir();
+			$ogCacheImg = 'wp-content/uploads' . $uploads[subdir] . "/" . $postID . "-" . $imgTitle . "." . $imgExt;
 			
 			
 			if ( !file_exists($ogCacheImg) ) {
@@ -33,7 +36,7 @@
 			
 		} else {
 		
-			$ogCacheImg = get_bloginfo(stylesheet_directory) . "/library/imgs/link.png";
+			$ogCacheImg = "wp-content/themes/" . get_option(stylesheet, 'thematicnightmare') . "/library/imgs/link.png";
 		
 		}
 		
