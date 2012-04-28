@@ -31,4 +31,48 @@ array(
 
 ));
 
+/**
+ * jQuery show/hide for meta box, post editor meta box
+ * 
+ * Hides/Shows boxes on demand - depending on your selection inside the post formats meta box
+**/
+function wpse14707_scripts()
+{
+
+	
+		wp_enqueue_script( 'jquery' );
+
+		$script = '
+		<script type="text/javascript">
+			jQuery( document ).ready( function($)
+				{
+					$( "#smart_meta_box_quote" ).addClass( "hidden" );
+
+					$( "input:not(#post-format-quote)" ).change( function() {
+						$( "#postdivrich" ).removeClass( "hidden" );
+						$( "#smart_meta_box_quote" ).addClass( "hidden" );
+					} );
+
+					$( "input#post-format-quote" ).change( function() {
+						
+						$( "#smart_meta_box_quote" ).removeClass( "hidden" );
+					} );
+
+					$( "input[name=\"post_format\"]" ).click( function() {
+						var mydiv = $(this).attr( "id" ).replace( "post-format-", "" );
+						$( "#smart_meta_box_quote div.inside div" ).addClass("hidden");
+						$( "#smart_meta_box_quote div.inside div#"+mydiv).removeClass( "hidden" );
+					} );
+				}
+			);
+		</script>
+		';
+
+		return print $script;
+
+}
+add_action( 'admin_footer', 'wpse14707_scripts' );
+
+
+
 ?>
