@@ -18,6 +18,11 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-formats', array( 'aside', 'link', 'quote' ) );
 }
 
+include('library/control/SmartMetaBox.php');
+include('library/control/metaboxer.php');
+
+
+
 //Altering the doctype to support FBML and OpenGraph
 function childtheme_create_doctype($content) {
     $content = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n";
@@ -59,7 +64,7 @@ function nmwp_g_analytics_go() {
 
 	if ( $nmwp_g_analytics_on == 'true'){
 	
-	?><!-- Google Analytics --><script type='text/javascript'>
+	?><!-- Google Analytics --><script async type='text/javascript'>
 	
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', '<?php echo $nmwp_g_analytics; ?>']);
@@ -104,24 +109,18 @@ add_action( 'widgets_init', 'nmwp_widgets_init' );
 
 function nmwp_cycler_script() {
 
+	  // load the custom options
+  global $childoptions;
+  foreach ($childoptions as $value) {
+    $$value['id'] = get_option($value['id'], $value['std']);
+  }
 
-	echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>';
-	echo '<script type="text/javascript" src="' . get_bloginfo('stylesheet_directory') . '/library/extensions/jquery.cycle.all.js"></script>';
-	?>
-	<script type="text/javascript">
-			
-				$('#featured').cycle({
-					fx: 'fade',
-					delay: 2000,
-					timeout: 7000,
-					autostop: false,
-					pause: true
-					
-				});
-			
-	</script>
-	
-<?php
+
+	//echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>';
+	//Ref:WordPress Bible pg 90
+	wp_enqueue_script('jquery-cycle', get_bloginfo('stylesheet_directory') . '/library/extensions/jquery.cycle.all.js">', array('jquery'));
+
+	wp_enqueue_script('cycleimp', get_bloginfo('stylesheet_directory') . '/library/extensions/cycle-imp.js">', array('jquery-cycle'));
 }
 
 add_action('wp_head', 'nmwp_cycler_script');
@@ -179,7 +178,8 @@ function childtheme_override_blogtitle() { ?>
 
 <?php 
 	
-	
+	//From http://buzzword.org.uk/2010/opengraph/#php
+	include "OpenGraphNode.php";
 
 }add_action('thematic_header','thematic_blogtitle',3);
 

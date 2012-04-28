@@ -1,37 +1,89 @@
-		<article class="linktype <?php thematic_post_class(); ?>" id="post-<?php the_ID(); ?>">
-			<header class="post-info">
-				<h1 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></a></h1>
+<?php
+	$postID = get_the_ID();
+
+	add_post_meta($postID, 'opengraph_image_cache', '', true);
+
+	$checkogcache = get_post_meta($postID, 'opengraph_image_cache', true);
+	
+	if (empty($checkogcache)){
+		$page = get_the_title();
+		$node = new OpenGraphNode($page);
+		
+		$ogImage = $node->image;
+		$ogTitle = $node->title;
+		
+		
+		
+		if ( (strlen($ogImage)) > 0 ){
+		
+			$imgParts = pathinfo($ogImage);
+			$imgExt = $imgParts['extension'];
+			$imgTitle = $imgParts['filename'];
+
 			
-				<address class="post-meta">
-					Written by <a href="<?php echo get_site_url(); ?>/author/<?php the_author_meta('user_nicename'); ?>/" rel="author" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"><?php the_author(); ?></a> on <time><?php the_time( 'F j, Y' ); ?> at <?php the_time('g:i a'); ?></time>
-					<a href="<?php echo get_site_url(); ?>/author/<?php the_author_meta('user_nicename'); ?>/" rel="author" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"><?php echo get_avatar( get_the_author_meta('ID'), 32 ); ?></a>
-				</address><!--/post-meta-->
-				<div class="frontpageFB">
-					<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php the_permalink(); ?>" show_faces="false" width="380" action="recommend" font=""></fb:like>
-					
-					<div class="frontpagePlus"><g:plusone size="medium" href="<?php the_permalink(); ?>"></g:plusone></div>
-					
-					<div class="frontpageTweet"><a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-count="horizontal" data-via="nitemaremodenet">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
-				</div>
-				
-			</header>
+			//'/' . get_option(upload_path, 'wp-content/uploads') . '/' . date("o") 
+			$uploads = wp_upload_dir();
+			$ogCacheImg = 'wp-content/uploads' . $uploads[subdir] . "/" . $postID . "-" . $imgTitle . "." . $imgExt;
 			
-			<?php if ( has_post_thumbnail() ) { ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-					<?php the_post_thumbnail( 'homepage-thumb' ); ?>
-				</a>
-			<?php } else { ?>
-				
-			<?php } ?> <!-- Thumbnail -->
+			
+			if ( !file_exists($ogCacheImg) ) {
+			
+
+				copy($ogImage, $ogCacheImg);
+			
+			}
+			//$ogCacheImg = $ogImage;
+			
+		} else {
+		
+			$ogCacheImg = "wp-content/themes/" . get_option(stylesheet, 'thematicnightmare') . "/library/imgs/link.png";
+		
+		}
+		
+		update_post_meta($postID, 'opengraph_image_cache', $ogCacheImg);
+		
+	} else {
+	
+		$ogCacheImg = get_post_meta($postID, 'opengraph_image_cache', true);
+		
+	}
+
+?>
+		
+		<article class="asidetype asidelink <?php thematic_post_class(); ?>" id="post-<?php the_ID(); ?>">
+
+					<div class="responses">
+						<span><?php comments_popup_link( 'No responses yet.', 'One response', '% responses', 'comments-link', 'Responses are off for this post'); ?></span>
+					</div>
 			
 			<div class="entry">
-				<?php the_excerpt(); ?><p class="readmoregraf"><a href="<?php the_permalink(); ?>">Read More from <?php the_title(); ?></a></p><!-- Excerpt -->
+			
+			<table class="aside-table" width="100%">
+				<tr>
+				<td width="24%" class="author-td" valign="bottom" align="center">
+				<div class="aside-link">
+				
+					<a href="<?php the_title(); ?>" title="<?php echo $ogTitle; ?>"><img alt="<?php echo $ogTitle; ?>" src="<?php echo $ogCacheImg; ?>" /></a>
+				
+				</div>
+				</td>
+				<td width="76%" valign="top" class="text-td">
+				<div class="aside-text left">
+					<?php the_content(); ?><!-- Full content -->
+					
+					
+
+				</div>
+				</td>
+				</tr>
+			</table>
 				<div class="clear"></div>
+				
 			</div><!--END entry -->
 			
 			<footer>
-				<div class="submeta">
-					<span><?php comments_popup_link( 'No comments yet.', 'One comment', '% comments', 'comments-link', 'Comments are off for this post'); ?></span>
-				</div>		 
+				<address class="post-meta">
+					Written by <a href="<?php echo get_site_url(); ?>/author/<?php the_author_meta('user_nicename'); ?>/" rel="author" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"><?php the_author(); ?></a> on <time><?php the_time( 'F j, Y' ); ?> at <?php the_time('g:i a'); ?></time>
+				</address><!--/post-meta-->
 			</footer>
 			</article>
