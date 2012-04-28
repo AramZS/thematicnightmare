@@ -1,12 +1,18 @@
-		<?php
-		
+<?php
+	$postID = get_the_ID();
+
+	add_post_meta($postID, 'opengraph_image_cache', '', true);
+
+	$checkogcache = get_post_meta($postID, 'opengraph_image_cache', true);
+	
+	if (empty($checkogcache)){
 		$page = get_the_title();
 		$node = new OpenGraphNode($page);
 		
 		$ogImage = $node->image;
 		$ogTitle = $node->title;
 		
-		$postID = get_the_ID();
+		
 		
 		if ( (strlen($ogImage)) > 0 ){
 		
@@ -31,7 +37,15 @@
 		
 		}
 		
-		?>
+		update_post_meta($postID, 'opengraph_image_cache', $ogCacheImg);
+		
+	} else {
+	
+		$ogCacheImg = get_post_meta($postID, 'opengraph_image_cache', true);
+		
+	}
+
+?>
 		
 		<article class="asidetype asidelink <?php thematic_post_class(); ?>" id="post-<?php the_ID(); ?>">
 
