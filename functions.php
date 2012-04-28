@@ -64,7 +64,7 @@ function nmwp_g_analytics_go() {
 
 	if ( $nmwp_g_analytics_on == 'true'){
 	
-	?><!-- Google Analytics --><script type='text/javascript'>
+	?><!-- Google Analytics --><script async type='text/javascript'>
 	
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', '<?php echo $nmwp_g_analytics; ?>']);
@@ -116,39 +116,11 @@ function nmwp_cycler_script() {
   }
 
 
-	echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>';
-	echo '<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>';
-	?>
-	<script type="text/javascript">
-			
-		$(document).ready(function () {
-			//From: http://www.takerootdesign.co.uk/blog/web-design/adding-named-navigation-jquery-cycle-gallery
-			//Create an array of titles
-			var titles = jQuery('#cycleContainer div.slide').find("h2").map(function() { return jQuery(this).text(); });
-			//Add an unordered list to contain the navigation
-			//Invoke the cycle plugin on #featured
-			jQuery('#cycleContainer').after('<ul id="pager" class="bclass"></ul>').cycle({
-				//Specify options
-				fx:     'fade', //Name of transition effect
-				//timeout: 0,           //Disable auto advance
-				autostop: false,
-				delay: 2000,
-				timeout: 7000,
-				pause: true,
-				pager:  '#pager',     //Selector for element to use as pager container
-				pagerEvent: 'mouseover',
-				fastOnEvent: true,
-				pagerAnchorBuilder: function (index) {               //Build the pager
-				return '<li><a href="#">' + titles[index] + '</a></li>';
-			},
-			updateActivePagerLink: function(pager, currSlideIndex) {
-				jQuery(pager).find('li').removeClass('active').filter('li:eq('+currSlideIndex+')').addClass('active');
-			}
-			});
-		});		
-			
-	</script>
-<?php
+	//echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>';
+	//Ref:WordPress Bible pg 90
+	wp_enqueue_script('jquery-cycle', get_bloginfo('stylesheet_directory') . '/library/extensions/jquery.cycle.all.js">', array('jquery'));
+
+	wp_enqueue_script('cycleimp', get_bloginfo('stylesheet_directory') . '/library/extensions/cycle-imp.js">', array('jquery-cycle'));
 }
 
 add_action('wp_head', 'nmwp_cycler_script');

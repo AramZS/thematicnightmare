@@ -23,6 +23,8 @@
 				copy($ogImage, $ogCacheImg);
 			
 			}
+			//$ogCacheImg = $ogImage;
+			
 		} else {
 		
 			$ogCacheImg = get_bloginfo(stylesheet_directory) . "/library/imgs/link.png";
