@@ -1,37 +1,53 @@
-		<article class="quotetype <?php thematic_post_class(); ?>" id="post-<?php the_ID(); ?>">
-			<header class="post-info">
-				<h1 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></a></h1>
-			
-				<address class="post-meta">
-					Written by <a href="<?php echo get_site_url(); ?>/author/<?php the_author_meta('user_nicename'); ?>/" rel="author" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"><?php the_author(); ?></a> on <time><?php the_time( 'F j, Y' ); ?> at <?php the_time('g:i a'); ?></time>
-					<a href="<?php echo get_site_url(); ?>/author/<?php the_author_meta('user_nicename'); ?>/" rel="author" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"><?php echo get_avatar( get_the_author_meta('ID'), 32 ); ?></a>
-				</address><!--/post-meta-->
-				<div class="frontpageFB">
-					<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php the_permalink(); ?>" show_faces="false" width="380" action="recommend" font=""></fb:like>
-					
-					<div class="frontpagePlus"><g:plusone size="medium" href="<?php the_permalink(); ?>"></g:plusone></div>
-					
-					<div class="frontpageTweet"><a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-count="horizontal" data-via="nitemaremodenet">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
-				</div>
-				
-			</header>
-			
-			<?php if ( has_post_thumbnail() ) { ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-					<?php the_post_thumbnail( 'homepage-thumb' ); ?>
-				</a>
-			<?php } else { ?>
-				
-			<?php } ?> <!-- Thumbnail -->
+		<article class="asidetype asidelink <?php thematic_post_class(); ?>" id="post-<?php the_ID(); ?>">
+
+					<div class="responses">
+						<span><?php comments_popup_link( 'No responses yet.', 'One response', '% responses', 'comments-link', 'Responses are off for this post'); ?></span>
+					</div>
 			
 			<div class="entry">
-				<?php the_excerpt(); ?><p class="readmoregraf"><a href="<?php the_permalink(); ?>">Read More from <?php the_title(); ?></a></p><!-- Excerpt -->
+			
+			<table class="aside-table" width="100%">
+				<tr>
+				<td width="24%" class="link-td" valign="top" align="center">
+				
+				
+					<img alt="Quote" src="<?php echo get_bloginfo(stylesheet_directory) . "/library/imgs/quotemark.png"; ?>" />
+				
+				
+				</td>
+				<td width="76%" valign="top" class="text-td">
+				<div class="aside-text quote-text left">
+					<?php the_content(); ?><!-- Full content -->
+					
+					<div class="quote-meta right">
+					<?php 
+					
+						echo '<div class="quote-author">';
+						$quoteAuthor = SmartMetaBox::get('quote_author'); 
+						echo $quoteAuthor;
+						echo '</div>';
+						
+						echo '<div class="quote-source">';
+						$quoteLink = SmartMetaBox::get('quote_link'); 
+						$quoteSource = SmartMetaBox::get('quote_source'); 
+						?><a href="<?php echo $quoteLink; ?>" title="<?php echo $quoteSource; ?>"><?php echo $quoteSource; ?></a><?php
+						echo '</div>';
+						
+					
+					?>
+					</div>
+
+				</div>
+				</td>
+				</tr>
+			</table>
 				<div class="clear"></div>
+				
 			</div><!--END entry -->
 			
 			<footer>
-				<div class="submeta">
-					<span><?php comments_popup_link( 'No comments yet.', 'One comment', '% comments', 'comments-link', 'Comments are off for this post'); ?></span>
-				</div>		 
+				<address class="post-meta">
+					Written by <a href="<?php echo get_site_url(); ?>/author/<?php the_author_meta('user_nicename'); ?>/" rel="author" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"><?php the_author(); ?></a> on <time><?php the_time( 'F j, Y' ); ?> at <?php the_time('g:i a'); ?></time>
+				</address><!--/post-meta-->
 			</footer>
 			</article>
