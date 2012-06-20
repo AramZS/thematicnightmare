@@ -330,9 +330,9 @@ add_filter('get_the_excerpt', 'nmpress_killer_excerpt');
 /** Let's make a better loop**/
 
 function nmwp_main_loop() {
-
+/**
 		global $options, $blog_id;
-		
+
 		foreach ($options as $value) {
 		    if (get_option( $value['id'] ) === FALSE) { 
 		        $$value['id'] = $value['std']; 
@@ -349,7 +349,7 @@ function nmwp_main_loop() {
 		}
 
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-		
+**/		
 	//Remember that global variable I called a while back? Let's bring it back. 
   global $firstslide;
   
