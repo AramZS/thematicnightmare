@@ -99,7 +99,17 @@ function nmwp_widgets_init() {
 		'after_widget' => '',
 		'before_title' => '',
 		'after_title' => '',
-	) );	
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Ad Top', 'thematic' ),
+		'id' => 'ad-top',
+		'description' => __( 'The top advertising location. 728px width location.', 'thematic' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );		
 
 }
 
@@ -203,6 +213,23 @@ function childtheme_override_blogdescription() {
 //HTML5 markup FTW. Also, the slider. 
 
 include('library/control/navslider.php');
+
+function nmwp_aboveheader()
+{
+?>
+
+<div class="top-widget-container">
+	<div class="top-ad-widget">
+						<?php if ( !function_exists('dynamic_sidebar')
+						|| !dynamic_sidebar('Ad Top') ) : ?>
+							<img src="<?php bloginfo('stylesheet_directory'); ?>/library/imgs/demoad-long.png" />
+						<?php endif; ?>
+	</div>
+</div>
+<?php
+
+}
+add_action('thematic_aboveheader','nmwp_aboveheader');
 
 /**Better safe than sorry, let's kill overflow posibilities */		
 function nmwp_belowheader()
